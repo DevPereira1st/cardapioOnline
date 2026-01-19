@@ -1,0 +1,54 @@
+:root {
+    --corFundo: #1f1f1f;
+}
+/* COMPUTADOR ---- NÃO FUNCIONA EM COMPUTADOR*/ 
+@media screen and (min-width: 769px) { 
+    * {
+        display: none;
+    }
+}
+
+/* TELA PADRÃO */
+@media screen and (max-width: 768px) and (min-width: 389px) {
+
+*{
+    background-color: #1f1f1f;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100;
+    user-select: none;
+
+    img {
+        width: 12em;
+        height: 12em;
+        user-select: none;
+    }
+}
+
+}
+/* TELA CEULAR PEQUENA */
+
+@media screen and (max-width: 390px) {
+*{
+    background-color: #1f1f1f;
+}
+
+.login {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    img {
+        width: 12em;
+        height: 12em;
+        user-select: none;
+    }
+}
+}   
