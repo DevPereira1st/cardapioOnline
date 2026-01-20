@@ -65,8 +65,8 @@
     user-select: none;
 
     img {
-        width: 12em;
-        height: 12em;
+        width: 9em;
+        height: 9em;
         user-select: none;
     }
 }
@@ -91,8 +91,8 @@
     height: 100vh;
 
     img {
-        width: 12em;
-        height: 12em;
+        width: 9em;
+        height: 9em;
         user-select: none;
     }
 }
