@@ -5,7 +5,8 @@
     --brancoItalia: #F1F2F1;
 }
 *{
-    background-image: url();
+    /* num precisa agora eu acho */
+    background-image: url(); 
 }
 /* COMPUTADOR */
 @media screen and (min-width: 1430px) {
@@ -125,6 +126,34 @@ footer {
             margin: 10px auto;
             width: 2.5em;
             height: 2.5em;  
+        }
+    }
+
+    .endereco {
+        width: 400px;
+        display: flex;
+        justify-content: space-around;
+        margin:auto;
+
+        .tituFooter{
+            font-family: "Indie Flower", cursive;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        .enderecoFooter {
+            iframe{
+                border-radius: 10px;
+            }
+        }
+
+        .descricaoFooter {
+            margin: 10px 0;
+            p {
+                font-family: "Comfortaa", sans-serif;
+                width: 150px;
+                font-size: 10px;
+            }
         }
     }
 
