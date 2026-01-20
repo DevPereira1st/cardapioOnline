@@ -20,13 +20,16 @@
 header, .menu {
     position: sticky;
     top: 10px;
-    backdrop-filter: blur(80px);
 }
 
 .menu {
     margin-top: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: #1f1f1f1f;
+    backdrop-filter: blur(10px);
+    border: 0.1px solid #f1f2f12b;
+    border-radius: 50px;
 
     .logo {
         width: 400px;
@@ -34,9 +37,9 @@ header, .menu {
         display: flex;
         justify-content: start;
         align-items: center;
-        border-radius: 50px;
+
         user-select: none;
-        background-color: var(--corFundo);
+
 
             img {
                 display: flex;
@@ -46,7 +49,6 @@ header, .menu {
                 width: 3em;
                 margin-left: 2em;
             }
-
     }
 
     .links {
@@ -56,6 +58,7 @@ header, .menu {
         gap: 1em;
         display: flex;
         justify-content: end;
+        margin-left: 25%;
 
         li {
             display: flex;
@@ -69,27 +72,30 @@ header, .menu {
 
             .pizzaSalgada{
                 a {
-                color: var(--verdeItalia);
-                text-decoration: none;
-                font-family: "Roboto", sans-serif;
+                    color: var(--verdeItalia);
+                    text-decoration: none;
+                    font-family: "Roboto", sans-serif;
+                    font-style: bold;
                 }
             }
             .pizzaDoce {  
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
                 a {
-                color: var(--brancoItalia);
-                text-decoration: none;
-                font-family: "Roboto", sans-serif;
+                    color: var(--brancoItalia);
+                    text-decoration: none;
+                    font-family: "Roboto", sans-serif;
+                    font-style: bold;
                 }
             }
             .Bebidas {
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
                 a {
-                color: var(--vermelhoItalia);
-                text-decoration: none;
-                font-family: "Roboto", sans-serif;
+                    color: var(--vermelhoItalia);
+                    text-decoration: none;
+                    font-family: "Roboto", sans-serif;
+                    font-style: bold;
                 }
             }
     }
