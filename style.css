@@ -5,7 +5,7 @@
     --brancoItalia: #F1F2F1;
 }
 *{
-    background-image: image();
+    background-image: url();
 }
 /* COMPUTADOR */
 @media screen and (min-width: 1430px) {
@@ -17,16 +17,23 @@
 /* TELA PADRÃO*/
 @media screen and (max-width: 768px) and (min-width: 389px) {
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 header, .menu {
     position: sticky;
     top: 10px;
+    width: 400px;
+    margin: auto;
 }
-
+/* cor do nav bar aqui */
 .menu {
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
-    background-color: #1f1f1f1f;
+    background-color: #1f1f1fe9;
     backdrop-filter: blur(10px);
     border: 0.1px solid #f1f2f12b;
     border-radius: 50px;
@@ -100,6 +107,30 @@ header, .menu {
             }
     }
 }
+
+}
+
+footer {
+    margin-top: 10px;
+    background-color: var(--brancoItalia);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    .imagemLogo {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        margin:auto;
+        img {
+            border-radius: 100%;
+            margin: 10px auto;
+            width: 2.5em;
+            height: 2.5em;  
+        }
+    }
+
+    .containerFim {
+        margin: auto;
+    }
 }
 /* TELA CEULAR PEQUENA */
 

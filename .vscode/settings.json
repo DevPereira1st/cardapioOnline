@@ -1,3 +1,7 @@
 {
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "liveshare.anonymousGuestApproval": "accept",
+    "liveshare.alwaysFollowHost": false,
+    "liveshare.guestApprovalRequired": true,
+    "liveServer.settings.multiRootWorkspaceName": "cardapioOnline"
 }
