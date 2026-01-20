@@ -1,3 +1,4 @@
+
 const shareData = {
   title: 'Cardapio Dallas Pizzaria',
   text: 'Confirá nossas pizzas',
