@@ -123,38 +123,93 @@ footer {
         margin:auto;
         img {
             border-radius: 100%;
-            margin: 10px auto;
-            width: 2.5em;
-            height: 2.5em;  
+            margin: 30px auto;
+            width: 3.5em;
+            height: 3.5em;  
         }
     }
 
     .endereco {
-        width: 400px;
+        max-width: 400px;
         display: flex;
-        justify-content: space-around;
-        margin:auto;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 30px;
 
+        .esquerda {
         .tituFooter{
-            font-family: "Indie Flower", cursive;
+            font-family: "Comfortaa", sans-serif;
             margin: 10px 0;
-            font-weight: 700;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         .enderecoFooter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
             iframe{
                 border-radius: 10px;
+                width: 150px;
+                height: 150px;
+                user-select: none;
             }
         }
 
         .descricaoFooter {
-            margin: 10px 0;
+            margin: 15px auto;
+            display: flex;
+            align-items: center;
+            user-select: none;
+
             p {
                 font-family: "Comfortaa", sans-serif;
                 width: 150px;
-                font-size: 10px;
+                
+                text-justify: center;
+                font-size: 9px;
+
+                display: flex;
+                justify-content: center;
+                font-weight: 500;
             }
         }
+        }
+        .direita {
+        .svg-compartilhar{
+            display: flex;
+            justify-content: end;
+
+            img{
+                display: flex;
+                justify-content: center;
+                padding-left: 40px;
+                width: 180px;
+                height: 200px;
+            }
+        }
+
+        .btnCompartilhar {
+            display: flex;
+            justify-content: center;
+            padding-left: 40px;
+
+            button {
+                font-family: "Comfortaa", sans-serif;
+                font-size: 10px;
+                width: 120px;
+                height: 30px;
+                user-select: none;
+                border-radius: 15px;
+                border: 1px solid var(--verdeItalia);
+                transition: 1s ease;
+            }:hover{
+                font-weight: 600;
+                border: 1px solid var(--vermelhoItalia);
+            }
+        }
+    }
     }
 
     .containerFim {
