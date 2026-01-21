@@ -27,21 +27,17 @@
             }
         });
 
-        // ABRIR LINKS
+function alternarMenu() {
+    var conteudo = document.getElementById("conteudoPizza");
+    var botao = document.getElementById("btnAcao");
 
-        function toggleMenu() {
-            // 1. Selecionamos os elementos que vamos mexer
-            var conteudo = document.getElementById("conteudoPizza");
-            var texto = document.getElementById("textoBotao");
+    // 1. Adiciona ou remove a classe 'aberto' do conteúdo
+    conteudo.classList.toggle("aberto");
 
-            // 2. Alternamos a classe 'ativo' no conteúdo
-            // Isso faz ele aparecer ou sumir baseado no CSS que criamos
-            conteudo.classList.toggle("ativo");
-
-            // 3. Verificamos se está aberto para trocar o texto
-            if (conteudo.classList.contains("ativo")) {
-                texto.innerText = "VER MENOS";
-            } else {
-                texto.innerText = "EXPANDIR";
-            }
-        }
+    // 2. Verifica se abriu para trocar o texto
+    if (conteudo.classList.contains("aberto")) {
+        botao.innerText = "VER MENOS";
+    } else {
+        botao.innerText = "EXPANDIR";
+    }
+}

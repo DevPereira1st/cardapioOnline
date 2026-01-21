@@ -4,6 +4,7 @@
     --verdeItalia: #009246;
     --brancoItalia: #F1F2F1;
 }
+
 /* COMPUTADOR */
 @media screen and (min-width: 1430px) {
     * {
@@ -31,6 +32,7 @@ header, .menu {
     width: 400px;
     margin: auto;
 }
+
 
 /* cor do nav bar aqui */
 .menu {
@@ -120,22 +122,62 @@ header, .menu {
         margin: auto;
     }
 
-    .abrir {
-            display: none; /* Oculto por padrão */
-            background-color: #f0f0f0;
-            padding: 10px;
-        }
+/* Container geral */
+.containerPizzaSalgada {
+    font-family: sans-serif;
+    width: 300px;
+    margin: 20px;
+}
 
-        /* 2. Classe que será adicionada via Javascript para mostrar o conteúdo */
-        .abrir.ativo {
-            display: block; /* Torna visível */
-        }
+/* Título Preto */
+.tituloPizzaSalgada {
+    background-color: #1a1a1a;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 8px 8px 0 0;
+}
 
-        /* Estilos visuais básicos para o botão */
-        .topo button {
-            cursor: pointer;
-            padding: 5px 15px;
-        }
+/* Conteúdo (Começa escondido) */
+.conteudo-pizzas {
+    display: none; /* ESCONDIDO POR PADRÃO */
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-left: 2px solid #1a1a1a;
+    border-right: 2px solid #1a1a1a;
+}
+
+/* Conteúdo quando está ATIVO (Aberto) */
+.conteudo-pizzas.aberto {
+    display: block; /* APARECE */
+}
+
+.conteudo-pizzas p {
+    margin: 5px 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+/* Botão Vermelho */
+.botao-vermelho {
+    width: 100%;
+    background-color: #c92a2a;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0 0 8px 8px;
+    transition: background 0.3s;
+}
+
+.botao-vermelho:hover {
+    background-color: #a02020;
+}
 
     .tituloPizzaSalgada {
         display: flex;
