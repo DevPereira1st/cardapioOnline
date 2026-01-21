@@ -4,10 +4,6 @@
     --verdeItalia: #009246;
     --brancoItalia: #F1F2F1;
 }
-*{
-    /* num precisa agora eu acho */
-    background-image: url(); 
-}
 /* COMPUTADOR */
 @media screen and (min-width: 1430px) {
     * {
@@ -23,18 +19,25 @@
     padding: 0;
 }
 
+body {
+    background-image: url(background.png); 
+    background-position: center;
+    background-repeat: repeat;
+}
+
 header, .menu {
     position: sticky;
     top: 10px;
     width: 400px;
     margin: auto;
 }
+
 /* cor do nav bar aqui */
 .menu {
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
-    background-color: #1f1f1fe9;
+    background-color: #1f1f1f86;
     backdrop-filter: blur(10px);
     border: 0.1px solid #f1f2f12b;
     border-radius: 50px;
@@ -108,7 +111,51 @@ header, .menu {
             }
     }
 }
+
+.containerPizzaSalgada {
+    margin: 25px;
+
+    .tituloPizzaSalgada {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Special Gothic Expanded One", sans-serif;
+        color: var(--brancoItalia);
+        background-color: var(--corFundo);
+        height: 30px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .abrir{
+        display: none;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 380px;
+        background-color: var(--vermelhoItalia);
+        border: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        p {
+        font-family: "Zalando Sans Expanded", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        }
+        button:hover{
+            .abrir{
+                display: inline-block;
+            }
+        }
+    }
 }
+
+
+
 /* FOOTER */
 
 footer {
@@ -334,6 +381,7 @@ footer {
         }
     }
 }
+}
 /* TELA CEULAR PEQUENA */
 
 @media screen and (max-width: 390px) {
@@ -426,7 +474,7 @@ header, .menu {
             }
     }
 }
-}
+
 /* FOOTER */
 
 footer {
@@ -653,3 +701,4 @@ footer {
     }
 
 }   
+}
