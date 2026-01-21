@@ -108,10 +108,16 @@ header, .menu {
             }
     }
 }
-
 }
+/* FOOTER */
 
 footer {
+    hr {
+        border: 0;
+        height: 1px;
+        background: #1f1f1f82;
+    }
+
     .textDallas {
         font-family: "Special Gothic Expanded One", sans-serif;
         font-weight: 400;
@@ -138,6 +144,60 @@ footer {
             width: 3.5em;
             height: 3.5em;  
         }
+    }
+
+    .social-links {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        gap: 20px;
+
+        .whatsapp {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            a {
+                color: #bbbdbb;
+                text-decoration: none;
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                list-style: none;
+            }
+            border-radius: 10px;
+
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #5dff00 1%,#30a345 97%);
+        }
+        
+        .instagram {
+            display: flex;
+            align-items: center;
+            a {
+                color: #bbbdbb;
+                text-decoration: none;
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                list-style: none;
+            }
+
+            border-radius: 10px;
+
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #e5d600 1%,#ff4ca8 37%,#ff0084 73%,#e500b7 100%);
+        }
+
     }
 
     .endereco {
@@ -185,11 +245,11 @@ footer {
 
         }
         .direita {
-        display: flex;
-        justify-content: space-between;
-        align-self: center;
-        margin: auto;
-        width: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+            margin: auto;
+            width: 350px;
 
         .descricaoFooter {
             margin-top: 20px;
@@ -204,22 +264,11 @@ footer {
 
         }
 
-        .svg-compartilhar{
-            display: flex;
-            justify-content: end;
-
-            img{
-                display: flex;
-                justify-content: center;
-                padding-left: 40px;
-                width: 180px;
-                height: 200px;
-            }
-        }
     }
         .btnCompartilhar {
             display: flex;
             justify-content: center;
+            margin-top: 15px;
 
             button {
                 font-family: "Comfortaa", sans-serif;
@@ -239,10 +288,369 @@ footer {
 
     .containerFim {
         margin: auto;
+        width: 300px;
+        .copy {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            font-family: "Comfortaa", sans-serif;
+            font-size: 13px;
+            color: var(--brancoItalia);
+            padding: 20px 0;
+        }
+        .devs {
+            margin: 20px 0;
+            color: rgb(223, 223, 222);
+            font-family: "Special Gothic Expanded One", sans-serif;
+            span {
+                color: rgb(193, 193, 193);
+                font-size: 13px;
+                i {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .developers {
+            display: flex;
+            justify-content: space-between;
+
+            .dark, .romano {
+                i {
+                    margin-right: 10px;
+                }
+                a {
+                    text-decoration: none;
+                    font-family: "Zalando Sans Expanded", sans-serif;
+                    font-weight: 500;
+                    color: rgb(220, 205, 205);
+                }
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
     }
 }
 /* TELA CEULAR PEQUENA */
 
 @media screen and (max-width: 390px) {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, .menu {
+    position: sticky;
+    top: 10px;
+    width: 350px;
+    margin: auto;
+}
+/* cor do nav bar aqui */
+.menu {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #1f1f1fe9;
+    backdrop-filter: blur(10px);
+    border: 0.1px solid #f1f2f12b;
+    border-radius: 50px;
+
+    .logo {
+        width: 400px;
+        height: 35px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        user-select: none;
+
+
+            img {
+                display: flex;
+                align-items: center;
+                border-radius: 100%;
+                height: 3em;
+                width: 3em;
+                margin-left: 2em;
+            }
+    }
+
+    .links {
+        margin-left: 2em;
+        margin-right: 1em;
+        display: flex;
+        gap: 1em;
+        display: flex;
+        justify-content: end;
+        margin-left: 25%;
+
+        li {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            list-style-type: none;  
+            a {
+                font-size: 0.7em;
+            }
+        }
+
+            .pizzaSalgada{
+                a {
+                    color: var(--verdeItalia);
+                    text-decoration: none;
+                    font-family: "Roboto", sans-serif;
+                    font-style: bold;
+                }
+            }
+            .pizzaDoce {  
+                text-decoration: none;
+                font-family: "Roboto", sans-serif;
+                a {
+                    color: var(--brancoItalia);
+                    text-decoration: none;
+                    font-family: "Roboto", sans-serif;
+                    font-style: bold;
+                }
+            }
+            .Bebidas {
+                text-decoration: none;
+                font-family: "Roboto", sans-serif;
+                a {
+                    color: var(--vermelhoItalia);
+                    text-decoration: none;
+                    font-family: "Roboto", sans-serif;
+                    font-style: bold;
+                }
+            }
+    }
+}
+}
+/* FOOTER */
+
+footer {
+    hr {
+        border: 0;
+        height: 1px;
+        background: #1f1f1f82;
+    }
+
+    .textDallas {
+        font-family: "Special Gothic Expanded One", sans-serif;
+        font-weight: 400;
+        margin: auto;
+        justify-content: center;
+        margin-bottom: 15px;
+        display: flex;
+        color: var(--corFundo);
+    }
+
+    margin-top: 10px;
+    background-color: var(--verdeItalia);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    .imagemLogo {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        margin:auto;
+        img {
+            border-radius: 100%;
+            margin: 20px auto;
+            width: 3.5em;
+            height: 3.5em;  
+        }
+    }
+
+    .social-links {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        gap: 20px;
+
+        .whatsapp {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            a {
+                color: #bbbdbb;
+                text-decoration: none;
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                list-style: none;
+            }
+            border-radius: 10px;
+
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #5dff00 1%,#30a345 97%);
+        }
+        
+        .instagram {
+            display: flex;
+            align-items: center;
+            a {
+                color: #bbbdbb;
+                text-decoration: none;
+            }
+            i {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                list-style: none;
+            }
+
+            border-radius: 10px;
+
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(45deg, #e5d600 1%,#ff4ca8 37%,#ff0084 73%,#e500b7 100%);
+        }
+
+    }
+
+    .endereco {
+        max-width: 300px;
+        display: block;
+        align-items: center;
+        margin: auto;
+        margin-bottom: 30px;
+        color: var(--brancoItalia);
+
+        .esquerda {
+        .tituFooter{
+            display: flex;
+            align-items: center;
+            font-family: "Zalando Sans Expanded", sans-serif;
+            margin: 15px 0;
+            margin-top: 30px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            font-size: 13px;
+
+            .bi-star-fill, .bi-star-half {
+                color: #f89900;
+            }
+        }
+
+        .enderecoFooter {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+
+            iframe{
+                border: 2px outset #ce2b3682;
+                border-radius: 5px;
+                width: 300px;
+                height: 150px;
+                user-select: none;
+                margin-bottom: 20px;
+            }
+        }
+
+
+        }
+        .direita {
+            display: flex;
+            justify-content: space-between;
+            align-self: center;
+            margin: auto;
+            width: 350px;
+
+        .descricaoFooter {
+            margin-top: 20px;
+            .tituEndereco {
+                margin: 10px 0;
+                font-family: "Special Gothic Expanded One", sans-serif;
+            }
+            .descEndereco {
+                font-family: "Zalando Sans Expanded", sans-serif;
+                font-size: 13px;
+            }
+
+        }
+
+    }
+        .btnCompartilhar {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+
+            button {
+                font-family: "Comfortaa", sans-serif;
+                font-size: 10px;
+                width: 120px;
+                height: 30px;
+                user-select: none;
+                border-radius: 15px;
+                border: 1px solid var(--corFundo);
+                transition: 1s ease;
+            }:hover{
+                font-weight: 600;
+                border: 1px solid var(--vermelhoItalia);
+            }
+        }
+    }
+
+    .containerFim {
+        margin: auto;
+        width: 300px;
+        .copy {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            align-items: center;
+            font-family: "Comfortaa", sans-serif;
+            font-size: 13px;
+            color: var(--brancoItalia);
+            padding: 20px 0;
+        }
+        .devs {
+            margin: 20px 0;
+            color: rgb(223, 223, 222);
+            font-family: "Special Gothic Expanded One", sans-serif;
+            span {
+                color: rgb(193, 193, 193);
+                font-size: 13px;
+                i {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .developers {
+            display: flex;
+            justify-content: space-between;
+
+            .dark, .romano {
+                i {
+                    margin-right: 10px;
+                }
+                a {
+                    text-decoration: none;
+                    font-family: "Zalando Sans Expanded", sans-serif;
+                    font-weight: 500;
+                    color: rgb(220, 205, 205);
+                }
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
+    }
 
 }   

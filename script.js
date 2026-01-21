@@ -1,18 +1,28 @@
+        // Ano Atual
+        document.getElementById("ano-copyright").textContent = new Date().getFullYear();
 
-const shareData = {
-  title: 'Cardapio Dallas Pizzaria',
-  text: 'Confirá nossas pizzas',
-  url: 'https://maps.app.goo.gl/9qHAa7iF7AABQJG98'
-};
+        // compartilhamento
+        const btnShare = document.getElementById('btn-compartilhar');
 
-const btn = document.querySelector('compartilharBtn');
+        btnShare.addEventListener('click', async () => {
+            // Dados a serem compartilhados
+            const shareData = {
+                title: document.title, // Título da página atual
+                text: 'Dê uma olhada neste conteúdo incrível!',
+                url: "https://maps.app.goo.gl/aoP2dARxXpMtfNs5A" // URL da página atual
+            };
 
-btn.addEventListener('click', async () => {
-  try {
-    // Abre a aba nativa do sistema (Android, iOS, Windows, etc.)
-    await navigator.share(shareData);
-    console.log('Compartilhado com sucesso');
-  } catch (err) {
-    console.log('O usuário cancelou ou o navegador não suporta: ' + err);
-  }
-});
+            try {
+                // Verifica se o navegador suporta a API de compartilhamento nativa
+                if (navigator.share) {
+                    await navigator.share(shareData);
+                    console.log('Conteúdo compartilhado com sucesso!');
+                } else {
+                    // Fallback: Copia para a área de transferência se não suportar nativo
+                    await navigator.clipboard.writeText(shareData.url);
+                    alert('Link copiado para a área de transferência!');
+                }
+            } catch (err) {
+                console.error('Erro ao compartilhar:', err);
+            }
+        });
