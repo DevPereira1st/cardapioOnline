@@ -119,6 +119,7 @@ footer {
         justify-content: center;
         margin-bottom: 15px;
         display: flex;
+        color: var(--corFundo);
     }
 
     margin-top: 10px;
@@ -140,23 +141,27 @@ footer {
     }
 
     .endereco {
-        max-width: 400px;
+        max-width: 300px;
         display: block;
         align-items: center;
         margin: auto;
         margin-bottom: 30px;
+        color: var(--brancoItalia);
 
         .esquerda {
         .tituFooter{
             display: flex;
-            justify-content: center;
             align-items: center;
             font-family: "Zalando Sans Expanded", sans-serif;
             margin: 15px 0;
             margin-top: 30px;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 2px;
             font-size: 13px;
+
+            .bi-star-fill, .bi-star-half {
+                color: #f89900;
+            }
         }
 
         .enderecoFooter {
@@ -177,26 +182,28 @@ footer {
             }
         }
 
-        .descricaoFooter {
-            margin: 15px auto;
-            display: flex;
-            align-items: center;
-            user-select: none;
 
-            p {
-                font-family: "Comfortaa", sans-serif;
-                width: 150px;
-                
-                text-justify: center;
-                font-size: 9px;
-
-                display: flex;
-                justify-content: center;
-                font-weight: 500;
-            }
-        }
         }
         .direita {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        margin: auto;
+        width: 350px;
+
+        .descricaoFooter {
+            margin-top: 20px;
+            .tituEndereco {
+                margin: 10px 0;
+                font-family: "Special Gothic Expanded One", sans-serif;
+            }
+            .descEndereco {
+                font-family: "Zalando Sans Expanded", sans-serif;
+                font-size: 13px;
+            }
+
+        }
+
         .svg-compartilhar{
             display: flex;
             justify-content: end;
@@ -209,11 +216,10 @@ footer {
                 height: 200px;
             }
         }
-
+    }
         .btnCompartilhar {
             display: flex;
             justify-content: center;
-            padding-left: 40px;
 
             button {
                 font-family: "Comfortaa", sans-serif;
@@ -222,14 +228,13 @@ footer {
                 height: 30px;
                 user-select: none;
                 border-radius: 15px;
-                border: 1px solid var(--verdeItalia);
+                border: 1px solid var(--corFundo);
                 transition: 1s ease;
             }:hover{
                 font-weight: 600;
                 border: 1px solid var(--vermelhoItalia);
             }
         }
-    }
     }
 
     .containerFim {
