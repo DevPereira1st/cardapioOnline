@@ -115,6 +115,10 @@ header, .menu {
 .containerPizzaSalgada {
     margin: 25px;
 
+    .topo {
+        width: 380px;
+    }
+
     .tituloPizzaSalgada {
         display: flex;
         justify-content: center;
@@ -125,9 +129,6 @@ header, .menu {
         height: 30px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-    }
-    .abrir{
-        display: none;
     }
 
     button {
@@ -146,11 +147,7 @@ header, .menu {
         font-size: 10px;
         font-weight: 500;
         }
-        button:hover{
-            .abrir{
-                display: inline-block;
-            }
-        }
+    }
     }
 }
 
