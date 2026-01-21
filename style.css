@@ -112,10 +112,20 @@ header, .menu {
 }
 
 footer {
+    .textDallas {
+        font-family: "Special Gothic Expanded One", sans-serif;
+        font-weight: 400;
+        margin: auto;
+        justify-content: center;
+        margin-bottom: 15px;
+        display: flex;
+    }
+
     margin-top: 10px;
-    background-color: var(--brancoItalia);
+    background-color: var(--verdeItalia);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+
     .imagemLogo {
         width: 400px;
         display: flex;
@@ -123,7 +133,7 @@ footer {
         margin:auto;
         img {
             border-radius: 100%;
-            margin: 30px auto;
+            margin: 20px auto;
             width: 3.5em;
             height: 3.5em;  
         }
@@ -131,29 +141,39 @@ footer {
 
     .endereco {
         max-width: 400px;
-        display: flex;
-        justify-content: center;
+        display: block;
+        align-items: center;
         margin: auto;
         margin-bottom: 30px;
 
         .esquerda {
         .tituFooter{
-            font-family: "Comfortaa", sans-serif;
-            margin: 10px 0;
-            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Zalando Sans Expanded", sans-serif;
+            margin: 15px 0;
+            margin-top: 30px;
+            font-weight: 400;
             letter-spacing: 2px;
+            font-size: 13px;
         }
 
         .enderecoFooter {
-            display: flex;
+            display: block;
             align-items: center;
             justify-content: center;
             margin: auto;
+            display: flex;
+            justify-content: center;
+
             iframe{
-                border-radius: 10px;
-                width: 150px;
+                border: 2px outset #ce2b3682;
+                border-radius: 5px;
+                width: 300px;
                 height: 150px;
                 user-select: none;
+                margin-bottom: 20px;
             }
         }
 
