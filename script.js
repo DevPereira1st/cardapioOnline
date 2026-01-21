@@ -26,3 +26,22 @@
                 console.error('Erro ao compartilhar:', err);
             }
         });
+
+        // ABRIR LINKS
+
+        function toggleMenu() {
+            // 1. Selecionamos os elementos que vamos mexer
+            var conteudo = document.getElementById("conteudoPizza");
+            var texto = document.getElementById("textoBotao");
+
+            // 2. Alternamos a classe 'ativo' no conteúdo
+            // Isso faz ele aparecer ou sumir baseado no CSS que criamos
+            conteudo.classList.toggle("ativo");
+
+            // 3. Verificamos se está aberto para trocar o texto
+            if (conteudo.classList.contains("ativo")) {
+                texto.innerText = "VER MENOS";
+            } else {
+                texto.innerText = "EXPANDIR";
+            }
+        }

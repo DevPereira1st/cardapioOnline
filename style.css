@@ -117,7 +117,25 @@ header, .menu {
 
     .topo {
         width: 380px;
+        margin: auto;
     }
+
+    .abrir {
+            display: none; /* Oculto por padrão */
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        /* 2. Classe que será adicionada via Javascript para mostrar o conteúdo */
+        .abrir.ativo {
+            display: block; /* Torna visível */
+        }
+
+        /* Estilos visuais básicos para o botão */
+        .topo button {
+            cursor: pointer;
+            padding: 5px 15px;
+        }
 
     .tituloPizzaSalgada {
         display: flex;
@@ -378,7 +396,7 @@ footer {
         }
     }
 }
-}
+
 /* TELA CEULAR PEQUENA */
 
 @media screen and (max-width: 390px) {
