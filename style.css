@@ -159,7 +159,7 @@ footer {
             display: flex;
             align-items: center;
             a {
-                color: #bbbdbb;
+                color: aliceblue;
                 text-decoration: none;
             }
             i {
@@ -180,7 +180,7 @@ footer {
             display: flex;
             align-items: center;
             a {
-                color: #bbbdbb;
+                color: aliceblue;
                 text-decoration: none;
             }
             i {
@@ -367,7 +367,6 @@ header, .menu {
 
         user-select: none;
 
-
             img {
                 display: flex;
                 align-items: center;
@@ -478,7 +477,7 @@ footer {
             display: flex;
             align-items: center;
             a {
-                color: #bbbdbb;
+                color: aliceblue;
                 text-decoration: none;
             }
             i {
@@ -499,7 +498,7 @@ footer {
             display: flex;
             align-items: center;
             a {
-                color: #bbbdbb;
+                color: aliceblue;
                 text-decoration: none;
             }
             i {
