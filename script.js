@@ -41,3 +41,31 @@ function alternarMenu() {
         botao.innerText = "EXPANDIR";
     }
 }
+
+// Aumenta imagem
+
+// Pega os elementos
+var modal = document.getElementById("meuModal");
+var img = document.getElementById("minhaImagem");
+var modalImg = document.getElementById("imgExpandida");
+
+// Ao clicar na imagem pequena:
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src; // Usa a mesma fonte da imagem clicada
+}
+
+// Pega o botão de fechar (o X)
+var span = document.getElementsByClassName("fechar")[0];
+
+// Ao clicar no X, fecha o modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// (Opcional) Fechar ao clicar fora da imagem
+modal.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
