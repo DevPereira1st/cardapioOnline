@@ -4,6 +4,18 @@
     --verdeItalia: #009246;
     --brancoItalia: #F1F2F1;
 }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/image/background.png); 
+    background-position: center;
+    background-repeat: repeat;
+    
+}
+
 
 /* COMPUTADOR */
 @media screen and (min-width: 1430px) {
@@ -20,13 +32,7 @@
     padding: 0;
 }
 
-body {
-    background-image: url(/image/background.png); 
-    background-position: center;
-    background-repeat: repeat;
-}
-
-header, .menu {
+.header, .menu {
     position: sticky;
     top: 10px;
     width: 400px;
@@ -38,17 +44,19 @@ header, .menu {
 .menu {
     margin-top: 10px;
     display: flex;
-    justify-content: space-around;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
     background-color: #2e2e2e87;
     backdrop-filter: blur(10px);
     border-radius: 50px;
 
     .logo {
-        width: 400px;
         height: 35px;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
+        margin: auto;
 
         user-select: none;
 
@@ -63,16 +71,16 @@ header, .menu {
     }
 
     .links {
-        max-width: 400px;
+        width: 360px;
         display: flex;
         gap: 1em;
-        display: flex;
-        justify-content: end;
-        margin-left: 25%;
+        justify-content: space-around;
+        margin-left: 15%;
+        margin-right: 10px;
 
         li {
             display: flex;
-            justify-content: start;
+            
             align-items: center;
             list-style-type: none;  
         }
@@ -83,7 +91,7 @@ header, .menu {
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
-                    font-size: 8px;
+                    font-size: 10px;
                     transition: 1s all;
                 }:hover {
                 border-bottom: 1px solid var(--verdeItalia);
@@ -97,7 +105,7 @@ header, .menu {
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
-                    font-size: 8px;
+                    font-size: 10px;
                 }:hover {
                 border-bottom: 1px solid var(--brancoItalia);
             }
@@ -110,7 +118,7 @@ header, .menu {
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
-                    font-size: 8px;
+                    font-size: 10px;
                 }:hover {
                 border-bottom: 1px solid var(--vermelhoItalia);
             }
@@ -322,9 +330,9 @@ header, .menu {
     }
 /* FOOTER */
 
-footer {
+.footer {
     width: 100%;
-    
+
     hr {
         border: 0;
         height: 1px;
@@ -516,33 +524,35 @@ footer {
 /* TELA CEULAR PEQUENA */
 
 @media screen and (max-width: 390px) {
-* {
-    margin: 0;
-    padding: 0;
+
+.header, .menu {
+    position: sticky;
+    display: flex;
+    top: 20px;
+    width: 360px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
-header, .menu {
-    position: sticky;
-    top: 10px;
-    width: 350px;
-    margin: auto;
-}
+
 /* cor do nav bar aqui */
 .menu {
     margin-top: 10px;
     display: flex;
-    justify-content: space-around;
-    background-color: #1f1f1fe9;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2e2e87;
     backdrop-filter: blur(10px);
-    border: 0.1px solid #f1f2f12b;
     border-radius: 50px;
 
     .logo {
-        width: 400px;
         height: 35px;
         display: flex;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
+        margin: auto;
 
         user-select: none;
 
@@ -557,22 +567,18 @@ header, .menu {
     }
 
     .links {
-        margin-left: 2em;
-        margin-right: 1em;
+        width: 360px;
         display: flex;
         gap: 1em;
-        display: flex;
-        justify-content: end;
-        margin-left: 25%;
+        justify-content: space-around;
+        margin-left: 15%;
+        margin-right: 10px;
 
         li {
             display: flex;
-            justify-content: end;
+            
             align-items: center;
             list-style-type: none;  
-            a {
-                font-size: 0.7em;
-            }
         }
 
             .pizzaSalgada{
@@ -580,8 +586,12 @@ header, .menu {
                     color: var(--verdeItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
-                    font-style: bold;
-                }
+                    font-weight: 700;
+                    font-size: 10px;
+                    transition: 1s all;
+                }:hover {
+                border-bottom: 1px solid var(--verdeItalia);
+            }
             }
             .pizzaDoce {  
                 text-decoration: none;
@@ -590,8 +600,11 @@ header, .menu {
                     color: var(--brancoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
-                    font-style: bold;
-                }
+                    font-weight: 700;
+                    font-size: 10px;
+                }:hover {
+                border-bottom: 1px solid var(--brancoItalia);
+            }
             }
             .Bebidas {
                 text-decoration: none;
@@ -600,16 +613,222 @@ header, .menu {
                     color: var(--vermelhoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
-                    font-style: bold;
-                }
+                    font-weight: 700;
+                    font-size: 10px;
+                }:hover {
+                border-bottom: 1px solid var(--vermelhoItalia);
+            }
             }
     }
 }
 
+.containerPizzaSalgada {
+    margin: 25px;
+
+    .topo {
+        width: 360px;
+        margin: auto;
+    }
+
+/* Container geral */
+.containerPizzaSalgada, .containerPizzaDoce {
+    font-family: sans-serif;
+    width: 300px;
+    margin: 20px;
+}
+
+/* Título Preto */
+.tituloPizzaSalgada {
+    background-color: #212020;
+    color: var(--brancoItalia);
+    font-weight: 500;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Conteúdo (Começa escondido) */
+.conteudo-pizzas {
+    display: block; /* ABERTO POR PADRÃO */
+    background-color:#272727eb;
+    color: white;
+    padding: 15px;
+    border-left: 2px solid #1a1a1a;
+    border-right: 2px solid #1a1a1a;
+}
+
+/* Conteúdo quando está ATIVO (Aberto) */
+.conteudo-pizzas.aberto {
+    display: none; /* SOME */
+}
+
+.conteudo-pizzas p {
+    margin: 5px 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 5px;
+}
+
+/* Botão Vermelho */
+.botao-vermelho {
+    width: 100%;
+    background-color: var(--vermelhoItalia);
+    color: black;
+    font-weight: bold;
+    border: none;
+    font-size: 12px;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0 0 8px 8px;
+    transition: background 0.3s;
+}
+
+.botao-vermelho:hover {
+    background-color: var(--vermelhoItalia);
+    font-size: 10px;
+}
+
+    .tituloPizzaSalgada {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Special Gothic Expanded One", sans-serif;
+        color: var(--brancoItalia);
+        background-color: var(--corFundo);
+        height: 30px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 360px;
+        background-color: var(--vermelhoItalia);
+        border: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        p {
+        font-family: "Zalando Sans Expanded", sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        }
+    }
+
+    .containerPizzas {
+
+        .topocontainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px 0;
+            
+            .tituPizza {
+                user-select: none;
+                max-width: 200px;
+                p {
+                    font-family: "Zalando Sans Expanded", sans-serif;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+
+            .precoPizza {
+                user-select: none;
+                display: flex;
+                align-items: center;
+                margin: auto 0;
+                font-family: "Special Gothic Expanded One", sans-serif;
+                font-size: 10px;
+                color: rgb(255, 113, 4);
+            }
+        }
+
+        .bottompizza {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .descPizza {
+                user-select: none;
+                width: 250px;
+                p {
+                    font-family: "Comfortaa", sans-serif;
+                    font-size: 12px;
+                }
+            }
+
+            .imgdaPizza {
+                user-select: none;
+                img {
+                    border-radius: 5px;
+                    width: 80px;
+                    height: 80px;
+                }
+/* Estilo para a imagem pequena parecer "clicável" */
+.imagem-pequena {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.imagem-pequena:hover {opacity: 0.7;}
+
+/* O Modal (fundo escuro) */
+.modal {
+  display: none; /* Escondido por padrão */
+  position: fixed; 
+  z-index: 1000; /* Garante que fique acima de tudo */
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.9); /* Preto com transparência */
+}
+
+/* A Imagem Expandida */
+.modal-conteudo {
+  margin: auto;
+  display: block;
+  width: 300px;
+  max-width: 700px;
+  height: 300px;
+  max-height: 700px;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+
+
+}
+
+/* Botão de fechar (X) */
+.fechar {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Animação de Zoom (opcional, mas fica bonito) */
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+            }
+        }
+    }
+    }
 /* FOOTER */
 
-footer {
+.footer {
     width: 100%;
+    
     hr {
         border: 0;
         height: 1px;
@@ -632,15 +851,16 @@ footer {
     border-top-right-radius: 15px;
 
     .imagemLogo {
-        width: 400px;
+        width: 360px;
         display: flex;
         justify-content: center;
         margin:auto;
+
         img {
             border-radius: 100%;
             margin: 20px auto;
-            width: 3.5em;
-            height: 3.5em;  
+            width: 3em;
+            height: 3em;  
         }
     }
 
@@ -706,42 +926,6 @@ footer {
         margin-bottom: 30px;
         color: var(--brancoItalia);
 
-        .esquerda {
-        .tituFooter{
-            display: flex;
-            align-items: center;
-            font-family: "Zalando Sans Expanded", sans-serif;
-            margin: 15px 0;
-            margin-top: 30px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            font-size: 13px;
-
-            .bi-star-fill, .bi-star-half {
-                color: #f89900;
-            }
-        }
-
-        .enderecoFooter {
-            display: block;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-
-            iframe{
-                border: 2px outset #ce2b3682;
-                border-radius: 5px;
-                width: 300px;
-                height: 150px;
-                user-select: none;
-                margin-bottom: 20px;
-            }
-        }
-
-
-        }
         .direita {
             display: flex;
             justify-content: space-between;
@@ -831,5 +1015,5 @@ footer {
             }
         }
     }
-}   
+} 
 }
