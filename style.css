@@ -39,9 +39,8 @@ header, .menu {
     margin-top: 10px;
     display: flex;
     justify-content: space-around;
-    background-color: #1f1f1f86;
+    background-color: #2e2e2e87;
     backdrop-filter: blur(10px);
-    border: 0.1px solid #f1f2f12b;
     border-radius: 50px;
 
     .logo {
@@ -64,8 +63,7 @@ header, .menu {
     }
 
     .links {
-        margin-left: 1em;
-        margin-right: 1em;
+        max-width: 400px;
         display: flex;
         gap: 1em;
         display: flex;
@@ -74,7 +72,7 @@ header, .menu {
 
         li {
             display: flex;
-            justify-content: end;
+            justify-content: start;
             align-items: center;
             list-style-type: none;  
         }
@@ -84,7 +82,7 @@ header, .menu {
                     color: var(--verdeItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
-                    font-style: bold;
+                    font-weight: 700;
                     font-size: 8px;
                     transition: 1s all;
                 }:hover {
@@ -98,7 +96,7 @@ header, .menu {
                     color: var(--brancoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
-                    font-style: bold;
+                    font-weight: 700;
                     font-size: 8px;
                 }:hover {
                 border-bottom: 1px solid var(--brancoItalia);
@@ -111,8 +109,8 @@ header, .menu {
                     color: var(--vermelhoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
-                    font-style: bold;
-                    font-size: 9px;
+                    font-weight: 700;
+                    font-size: 8px;
                 }:hover {
                 border-bottom: 1px solid var(--vermelhoItalia);
             }
@@ -223,21 +221,26 @@ header, .menu {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin: 5px 0;
             
             .tituPizza {
+                user-select: none;
+                max-width: 200px;
                 p {
-                    font-family: "Comfortaa", sans-serif;
-                    font-weight: bold;
+                    font-family: "Zalando Sans Expanded", sans-serif;
+                    font-size: 15px;
+                    font-weight: 500;
                 }
             }
 
             .precoPizza {
+                user-select: none;
                 display: flex;
                 align-items: center;
                 margin: auto 0;
                 font-family: "Special Gothic Expanded One", sans-serif;
-                font-size: 15px;
-                color: rgb(255, 128, 0);
+                font-size: 10px;
+                color: rgb(255, 113, 4);
             }
         }
 
@@ -247,6 +250,8 @@ header, .menu {
             align-items: center;
 
             .descPizza {
+                user-select: none;
+                width: 250px;
                 p {
                     font-family: "Comfortaa", sans-serif;
                     font-size: 12px;
@@ -254,7 +259,9 @@ header, .menu {
             }
 
             .imgdaPizza {
+                user-select: none;
                 img {
+                    border-radius: 5px;
                     width: 80px;
                     height: 80px;
                 }

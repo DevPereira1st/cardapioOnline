@@ -28,7 +28,7 @@
             }
         });
 
-// FECHA E ABRE O CARDAPIO SALGADO 
+// FECHA E ABRE O CARDAPIO
 
 function alternarMenu(idDoConteudo, botaoClicado) {
     // 1. Pega a div de conteúdo específica baseada no ID que enviamos no HTML
