@@ -135,7 +135,7 @@ header, .menu {
 
 /* Título Preto */
 .tituloPizzaSalgada {
-    background-color: #1a1a1a;
+    background-color: #212020;
     color: var(--brancoItalia);
     font-weight: 500;
     text-align: center;
@@ -146,8 +146,8 @@ header, .menu {
 
 /* Conteúdo (Começa escondido) */
 .conteudo-pizzas {
-    display: none; /* ESCONDIDO POR PADRÃO */
-    background-color: #272727eb;
+    display: block; /* ABERTO POR PADRÃO */
+    background-color:#272727eb;
     color: white;
     padding: 15px;
     border-left: 2px solid #1a1a1a;
@@ -156,7 +156,7 @@ header, .menu {
 
 /* Conteúdo quando está ATIVO (Aberto) */
 .conteudo-pizzas.aberto {
-    display: block; /* APARECE */
+    display: none; /* SOME */
 }
 
 .conteudo-pizzas p {
@@ -323,6 +323,8 @@ header, .menu {
 /* FOOTER */
 
 footer {
+    width: 100%;
+    
     hr {
         border: 0;
         height: 1px;
@@ -419,42 +421,6 @@ footer {
         margin-bottom: 30px;
         color: var(--brancoItalia);
 
-        .esquerda {
-        .tituFooter{
-            display: flex;
-            align-items: center;
-            font-family: "Zalando Sans Expanded", sans-serif;
-            margin: 15px 0;
-            margin-top: 30px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            font-size: 13px;
-
-            .bi-star-fill, .bi-star-half {
-                color: #f89900;
-            }
-        }
-
-        .enderecoFooter {
-            display: block;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            display: flex;
-            justify-content: center;
-
-            iframe{
-                border: 2px outset #ce2b3682;
-                border-radius: 5px;
-                width: 300px;
-                height: 150px;
-                user-select: none;
-                margin-bottom: 20px;
-            }
-        }
-
-
-        }
         .direita {
             display: flex;
             justify-content: space-between;
@@ -643,6 +609,7 @@ header, .menu {
 /* FOOTER */
 
 footer {
+    width: 100%;
     hr {
         border: 0;
         height: 1px;

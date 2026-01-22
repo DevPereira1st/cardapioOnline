@@ -39,9 +39,9 @@ function alternarMenu(idDoConteudo, botaoClicado) {
 
     // 3. Verifica se essa div específica abriu para trocar o texto do botão
     if (conteudo.classList.contains("aberto")) {
-        botaoClicado.innerText = "VER MENOS";
-    } else {
         botaoClicado.innerText = "EXPANDIR";
+    } else {
+        botaoClicado.innerText = "VER MENOS";
     }
 }
 // AUMENTA CADA IMAGEM INDEPENDENTE
