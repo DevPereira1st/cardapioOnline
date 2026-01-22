@@ -10,6 +10,107 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta http-equiv="refresh" content="5;url=cardapioOnline.html">
+    <style>
+:root {
+    --corFundo: #1f1f1f;
+    --vermelhoItalia: #CE2B37;
+    --verdeItalia: #009246;
+    --brancoItalia: #F1F2F1;
+}
+/* COMPUTADOR ---- NÃO FUNCIONA EM COMPUTADOR*/ 
+@media screen and (min-width: 769px) { 
+    * {
+        background-color: var(--corFundo);
+    }
+
+    .login {
+        display: none;
+    }
+
+    .no-pc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .imagem{
+
+            img {
+                display: block;
+                width: 15em;
+                height: 15em;
+            }
+        }
+
+        p {
+            display: block;
+            font-family: "Roboto", sans-serif;
+            color: var(--verdeItalia);
+            font-size: 30px;
+
+                strong {
+                    display: flex;
+                    justify-content: center;
+                    color: var(--vermelhoItalia);
+                    font-size: 0.7em;
+                }
+        }
+    }
+}
+
+/* TELA PADRÃO */
+@media screen and (max-width: 768px) and (min-width: 389px) {
+
+*{
+    background-color: var(--corFundo);
+}
+
+.no-pc {
+    display: none;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100;
+    user-select: none;
+
+    img {
+        width: 9em;
+        height: 9em;
+        user-select: none;
+    }
+}
+
+}
+/* TELA CEULAR PEQUENA */
+
+@media screen and (max-width: 390px) {
+*{
+    background-color: var(--corFundo);
+}
+
+.no-pc {
+    display: none;
+}
+
+.login {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    img {
+        width: 9em;
+        height: 9em;
+        user-select: none;
+    }
+}
+}   
+    </style>
 </head>
 <body>
     <div class="no-pc">
