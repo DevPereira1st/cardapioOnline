@@ -1,7 +1,8 @@
-        // Ano Atual
+
+// PUXA ANO ANUAL PARA O COPYRIGHT  
         document.getElementById("ano-copyright").textContent = new Date().getFullYear();
 
-        // compartilhamento
+// API DE COMPARTILHAMENTO
         const btnShare = document.getElementById('btn-compartilhar');
 
         btnShare.addEventListener('click', async () => {
@@ -27,74 +28,57 @@
             }
         });
 
-// fecha e abre cardapio
+// FECHA E ABRE O CARDAPIO SALGADO 
 
-function alternarMenu() {
-    var conteudo = document.getElementById("conteudoPizza");
-    var botao = document.getElementById("btnAcao");
+function alternarMenu(idDoConteudo, botaoClicado) {
+    // 1. Pega a div de conteúdo específica baseada no ID que enviamos no HTML
+    var conteudo = document.getElementById(idDoConteudo);
 
-    // 1. Adiciona ou remove a classe 'aberto' do conteúdo
+    // 2. Adiciona ou remove a classe 'aberto' apenas nessa div
     conteudo.classList.toggle("aberto");
 
-    // 2. Verifica se abriu para trocar o texto
+    // 3. Verifica se essa div específica abriu para trocar o texto do botão
     if (conteudo.classList.contains("aberto")) {
-        botao.innerText = "VER MENOS";
+        botaoClicado.innerText = "VER MENOS";
     } else {
-        botao.innerText = "EXPANDIR";
+        botaoClicado.innerText = "EXPANDIR";
     }
 }
+// AUMENTA CADA IMAGEM INDEPENDENTE
 
-// Aumenta imagem
+// Espera o documento carregar (opcional, mas recomendado)
+document.addEventListener('DOMContentLoaded', function() {
 
-// Pega os elementos
-var modal = document.getElementById("meuModal");
-var img = document.getElementById("minhaImagem");
-var modalImg = document.getElementById("imgExpandida");
+    // 1. Seleciona todos os containers que possuem a classe 'imgdaPizza'
+    // Cada um desses containers tem dentro de si uma <img> e um <div class="modal">
+    var containers = document.querySelectorAll('.imgdaPizza');
 
-// Ao clicar na imagem pequena:
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src; // Usa a mesma fonte da imagem clicada
-}
+    // 2. Passa por cada container encontrado (loop)
+    containers.forEach(function(container) {
+        
+        // Dentro deste container específico, buscamos os elementos:
+        var imgPequena = container.querySelector('img');      // A imagem clicável
+        var modal = container.querySelector('.modal');        // O modal escondido
+        var modalImg = modal.querySelector('.modal-conteudo');// Onde a foto grande aparece
+        var span = modal.querySelector('.fechar');            // O botão X
 
-// Pega o botão de fechar (o X)
-var span = document.getElementsByClassName("fechar")[0];
+        // --- Configura o clique na imagem pequena ---
+        imgPequena.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src; // Copia o src da imagem clicada para o modal
+        }
 
-// Ao clicar no X, fecha o modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
+        // --- Configura o clique no X ---
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
 
-// (Opcional) Fechar ao clicar fora da imagem
-modal.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
+        // --- Configura o clique fora da imagem (fundo escuro) ---
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
 
-// Pega os elementos
-
-var modal = document.getElementById("meuModal1");
-var img = document.getElementById("minhaImagem1");
-var modalImg = document.getElementById("imgExpandida1");
-
-// Ao clicar na imagem pequena:
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src; // Usa a mesma fonte da imagem clicada
-}
-
-// Pega o botão de fechar (o X)
-var span = document.getElementsByClassName("fechar")[0];
-
-// Ao clicar no X, fecha o modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-
-// (Opcional) Fechar ao clicar fora da imagem
-modal.onclick = function(event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-}
+});

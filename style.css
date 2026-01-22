@@ -53,7 +53,6 @@ header, .menu {
 
         user-select: none;
 
-
             img {
                 display: flex;
                 align-items: center;
@@ -65,7 +64,7 @@ header, .menu {
     }
 
     .links {
-        margin-left: 2em;
+        margin-left: 1em;
         margin-right: 1em;
         display: flex;
         gap: 1em;
@@ -78,9 +77,6 @@ header, .menu {
             justify-content: end;
             align-items: center;
             list-style-type: none;  
-            a {
-                font-size: 0.5em;
-            }
         }
 
             .pizzaSalgada{
@@ -89,7 +85,11 @@ header, .menu {
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-style: bold;
-                }
+                    font-size: 8px;
+                    transition: 1s all;
+                }:hover {
+                border-bottom: 1px solid var(--verdeItalia);
+            }
             }
             .pizzaDoce {  
                 text-decoration: none;
@@ -99,7 +99,10 @@ header, .menu {
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-style: bold;
-                }
+                    font-size: 8px;
+                }:hover {
+                border-bottom: 1px solid var(--brancoItalia);
+            }
             }
             .Bebidas {
                 text-decoration: none;
@@ -109,7 +112,10 @@ header, .menu {
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-style: bold;
-                }
+                    font-size: 9px;
+                }:hover {
+                border-bottom: 1px solid var(--vermelhoItalia);
+            }
             }
     }
 }
@@ -307,11 +313,6 @@ header, .menu {
         }
     }
     }
-
-}
-
-
-
 /* FOOTER */
 
 footer {
@@ -536,6 +537,7 @@ footer {
             }
         }
     }
+}
 }
 
 /* TELA CEULAR PEQUENA */
@@ -855,6 +857,5 @@ footer {
             }
         }
     }
-
 }   
 }

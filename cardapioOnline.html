@@ -36,7 +36,8 @@
     </header>
     <!-- CARDAPIO -->
     <main>
-    <!-- COMEÇA  PIZZA SALGADA-->
+
+    <!-- PIZZA SALGADA COMEÇA AQUI-->
 <div class="containerPizzaSalgada"  id="salgadas">
     <div class="tituloPizzaSalgada">
         PIZZAS SALGADAS
@@ -58,12 +59,12 @@
                 <p>MOLHO ESPECIAL, MUÇARELA, CALABRESA E ORÉGANO.</p>
             </div>
             <div class="imgdaPizza">
-                <img src="/image/logodallas.png" alt="" id="minhaImagem">
+                <img src="/image/logodallas.png" alt="">
             
-                <div id="meuModal" class="modal">
+                <div class="modal">
 
             <span class="fechar">&times;</span>
-            <img class="modal-conteudo" id="imgExpandida">
+            <img class="modal-conteudo">
             <div id="legenda"></div>
             </div>
             </div>
@@ -97,7 +98,7 @@
             </div>
 
         </div>
-        
+
 
         <div class="containerPizzas">
             <div class="topocontainer">
@@ -801,6 +802,22 @@
             </div>
         </div>
 
+    </div>
+
+<button id="btnAcao" onclick="alternarMenu('conteudoPizza', this)" class="botao-vermelho">
+    EXPANDIR
+</button>
+</div>
+
+    <!-- PIZZAS DOCES COMEÇA AQUI -->
+
+<div class="containerPizzaSalgada"  id="doces">
+    <div class="tituloPizzaSalgada">
+        PIZZAS DOCES
+    </div>
+
+    <div id="conteudoPizza1" class="conteudo-pizzas">
+
         <div class="containerPizzas">
             <div class="topocontainer">
             <div class="tituPizza">
@@ -1037,10 +1054,12 @@
 
     </div>
 
-    <button id="btnAcao" onclick="alternarMenu()" class="botao-vermelho">
-        EXPANDIR
-    </button>
-</div>
+<button id="btnAcao1" onclick="alternarMenu('conteudoPizza1', this)" class="botao-vermelho">
+    EXPANDIR
+</button>
+</div>    
+
+    <!-- BEBIDAS COMEÇA AQUI -->
 
     </main>
 
