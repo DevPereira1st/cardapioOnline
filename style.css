@@ -566,12 +566,15 @@ body {
 .no-pc {
     display: none;
 }
-
+body {
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
 .header, .menu {
     position: sticky;
     display: flex;
-    top: 20px;
-    width: 360px;
+    top: 10px;
+    width: 90%;
+    max-width: 340px;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -602,18 +605,18 @@ body {
                 display: flex;
                 align-items: center;
                 border-radius: 100%;
-                height: 3em;
-                width: 3em;
-                margin-left: 2em;
+                margin-left: 0.5em; /* Reduz a margem da logo */
+                height: 2.5em;
+                width: 2.5em;
             }
     }
 
     .links {
-        width: 360px;
+        width: 100%;
         display: flex;
-        gap: 1em;
-        justify-content: space-around;
-        margin-left: 15%;
+        gap: 0.5em;
+        justify-content: space-evenly;
+        margin-left: 0;
         margin-right: 10px;
 
         li {
@@ -665,18 +668,18 @@ body {
 }
 
 .containerPizzaSalgada {
-    margin: 25px;
+    margin: 15px auto;
+    width: 90%;
 
     .topo {
-        width: 360px;
-        margin: auto;
+        width: 100%;
     }
 
 /* Container geral */
 .containerPizzaSalgada, .containerPizzaDoce {
     font-family: sans-serif;
-    width: 300px;
-    margin: 20px;
+    margin: 15px auto;
+    width: 90%;
 }
 
 /* Título Preto */
@@ -748,7 +751,7 @@ body {
         justify-content: center;
         align-items: center;
         margin: auto;
-        width: 360px;
+        width: 100%;
         background-color: var(--vermelhoItalia);
         border: none;
         border-bottom-left-radius: 10px;
@@ -774,7 +777,7 @@ body {
                 max-width: 200px;
                 p {
                     font-family: "Zalando Sans Expanded", sans-serif;
-                    font-size: 15px;
+                    font-size: 13px;
                     font-weight: 500;
                 }
             }
@@ -800,7 +803,7 @@ body {
                 width: 250px;
                 p {
                     font-family: "Comfortaa", sans-serif;
-                    font-size: 12px;
+                    font-size: 10px;
                 }
             }
 
@@ -808,8 +811,8 @@ body {
                 user-select: none;
                 img {
                     border-radius: 5px;
-                    width: 80px;
-                    height: 80px;
+                    width: 65px;
+                    height: 65px;
                 }
 /* Estilo para a imagem pequena parecer "clicável" */
 .imagem-pequena {
@@ -836,9 +839,9 @@ body {
 .modal-conteudo {
   margin: auto;
   display: block;
-  width: 300px;
+  width: 90%;
   max-width: 700px;
-  height: 300px;
+  height: auto;
   max-height: 700px;
   animation-name: zoom;
   animation-duration: 0.6s;
@@ -893,7 +896,7 @@ body {
     border-top-right-radius: 15px;
 
     .imagemLogo {
-        width: 360px;
+        width: 100%;
         display: flex;
         justify-content: center;
         margin:auto;
@@ -907,7 +910,7 @@ body {
     }
 
     .social-links {
-        width: 300px;
+        width: 90%;
         display: flex;
         align-items: center;
         margin: auto;
@@ -973,7 +976,7 @@ body {
             justify-content: space-between;
             align-self: center;
             margin: auto;
-            width: 350px;
+            width: 90%;
 
         .descricaoFooter {
             margin-top: 20px;
@@ -1012,7 +1015,7 @@ body {
 
     .containerFim {
         margin: auto;
-        width: 300px;
+        width: 90%;
         .copy {
             display: flex;
             justify-content: center;
