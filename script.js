@@ -22,7 +22,7 @@ btnShare.addEventListener('click', async () => {
     const shareData = {
         title: document.title, 
         text: mensagem,
-        url: "https://dallascardapio.vercel.app/" // O link do site fica separado do texto
+        url: "\nhttps://dallascardapio.vercel.app/" // O link do site fica separado do texto
     };
 
     try {
