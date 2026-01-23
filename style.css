@@ -18,15 +18,54 @@ body {
 
 
 /* COMPUTADOR */
-@media screen and (min-width: 1430px) {
-    * {
+@media screen and (min-width: 769px) {
+* {
+        background-color: var(--corFundo);
+    }
+
+    .login, .header, .containerPizzaSalgada, .footer{
         display: none;
+    }
+
+    .no-pc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .imagem{
+
+            img {
+                display: block;
+                width: 15em;
+                height: 15em;
+            }
+        }
+
+        p {
+            display: flex;
+            font-family: "Roboto", sans-serif;
+            color: var(--verdeItalia);
+            font-size: 20px;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+
+                strong {
+                    display: flex;
+                    justify-content: center;
+                    color: var(--vermelhoItalia);
+                    font-size: 30px;
+                }
+        }
     }
 }
 
 /* TELA PADRÃO*/
 @media screen and (max-width: 768px) and (min-width: 389px) {
-
+.no-pc {
+    display: none;
+}
 * {
     margin: 0;
     padding: 0;
@@ -524,6 +563,9 @@ body {
 /* TELA CEULAR PEQUENA */
 
 @media screen and (max-width: 390px) {
+.no-pc {
+    display: none;
+}
 
 .header, .menu {
     position: sticky;
