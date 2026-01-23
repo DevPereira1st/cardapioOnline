@@ -800,7 +800,7 @@ body {
 
             .descPizza {
                 user-select: none;
-                width: 250px;
+                width: 220px;
                 p {
                     font-family: "Comfortaa", sans-serif;
                     font-size: 10px;
@@ -873,6 +873,8 @@ body {
 
 .footer {
     width: 100%;
+    bottom: 0;
+
     
     hr {
         border: 0;

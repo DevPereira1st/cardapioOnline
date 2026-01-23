@@ -9,8 +9,10 @@
             // Dados a serem compartilhados
             const shareData = {
                 title: document.title, // Título da página atual
-                text: 'Dê uma olhada neste conteúdo incrível!',
-                url: "https://maps.app.goo.gl/aoP2dARxXpMtfNs5A" // URL da página atual
+                text: 'Dê uma olhada neste cardapio incrível!',
+                url: "https://dallascardapio.vercel.app/", 
+                text: 'Venha fazer parte dessa momento: \n Local:',
+                url: "https://maps.app.goo.gl/aoP2dARxXpMtfNs5A" // URL DO LOCAL
             };
 
             try {
