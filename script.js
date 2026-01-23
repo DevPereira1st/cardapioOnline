@@ -3,32 +3,40 @@
         document.getElementById("ano-copyright").textContent = new Date().getFullYear();
 
 // API DE COMPARTILHAMENTO
-        const btnShare = document.getElementById('btn-compartilhar');
+const btnShare = document.getElementById('btn-compartilhar');
 
-        btnShare.addEventListener('click', async () => {
-            // Dados a serem compartilhados
-            const shareData = {
-                title: document.title, // Título da página atual
-                text: 'Dê uma olhada neste cardapio incrível!',
-                url: "https://dallascardapio.vercel.app/", 
-                text: 'Venha fazer parte dessa momento: \n Local:',
-                url: "https://maps.app.goo.gl/aoP2dARxXpMtfNs5A" // URL DO LOCAL
-            };
+btnShare.addEventListener('click', async () => {
+    
+    // 1. Pergunta o nome do usuário antes de compartilhar
+    let nomeUsuario = prompt("Qual o seu nome para colocar no convite?");
+    
+    // Se o usuário cancelar ou não digitar nada, definimos um padrão
+    if (!nomeUsuario) {
+        nomeUsuario = "Um amigo";
+    }
 
-            try {
-                // Verifica se o navegador suporta a API de compartilhamento nativa
-                if (navigator.share) {
-                    await navigator.share(shareData);
-                    console.log('Conteúdo compartilhado com sucesso!');
-                } else {
-                    // Fallback: Copia para a área de transferência se não suportar nativo
-                    await navigator.clipboard.writeText(shareData.url);
-                    alert('Link copiado para a área de transferência!');
-                }
-            } catch (err) {
-                console.error('Erro ao compartilhar:', err);
-            }
-        });
+    // 2. Montamos o texto dinâmico com o nome da pessoa e o local
+    const mensagem = `🍕 Olá! ${nomeUsuario} está te convidando para dar uma olhada neste cardápio incrível!\n\n📍 Local: https://maps.app.goo.gl/aoP2dARxXpMtfNs5A`;
+
+    // 3. Dados a serem compartilhados (Corrigido para não repetir propriedades)
+    const shareData = {
+        title: document.title, 
+        text: mensagem,
+        url: "https://dallascardapio.vercel.app/" // O link do site fica separado do texto
+    };
+
+    try {
+        if (navigator.share) {
+            await navigator.share(shareData);
+            console.log('Conteúdo compartilhado com sucesso!');
+        } else {
+            await navigator.clipboard.writeText(shareData.text + " " + shareData.url);
+            alert('Link copiado para a área de transferência!');
+        }
+    } catch (err) {
+        console.error('Erro ao compartilhar:', err);
+    }
+});
 
 // FECHA E ABRE O CARDAPIO
 
