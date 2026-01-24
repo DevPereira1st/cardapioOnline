@@ -4,26 +4,30 @@
     --verdeItalia: #009246;
     --brancoItalia: #F1F2F1;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-image: url(/image/background.png); 
+    background-image: url(/image/background.png);
     background-position: center;
     background-repeat: repeat;
-    
+
 }
 
 
 /* COMPUTADOR */
 @media screen and (min-width: 769px) {
-* {
+    * {
         background-color: var(--corFundo);
     }
 
-    .login, .header, .containerPizzaSalgada, .footer{
+    .login,
+    .header,
+    .containerPizzaSalgada,
+    .footer {
         display: none;
     }
 
@@ -33,7 +37,7 @@ body {
         align-items: center;
         height: 100vh;
 
-        .imagem{
+        .imagem {
 
             img {
                 display: block;
@@ -51,53 +55,55 @@ body {
             justify-content: center;
             text-align: center;
 
-                strong {
-                    display: flex;
-                    justify-content: center;
-                    color: var(--vermelhoItalia);
-                    font-size: 30px;
-                }
+            strong {
+                display: flex;
+                justify-content: center;
+                color: var(--vermelhoItalia);
+                font-size: 30px;
+            }
         }
     }
 }
 
 /* TELA PADRÃO*/
 @media screen and (max-width: 768px) and (min-width: 389px) {
-.no-pc {
-    display: none;
-}
-* {
-    margin: 0;
-    padding: 0;
-}
+    .no-pc {
+        display: none;
+    }
 
-.header, .menu {
-    position: sticky;
-    top: 10px;
-    width: 400px;
-    margin: auto;
-}
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header,
+    .menu {
+        position: sticky;
+        top: 10px;
+        width: 400px;
+        margin: auto;
+    }
 
 
-/* cor do nav bar aqui */
-.menu {
-    margin-top: 10px;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    background-color: #2e2e2e87;
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-
-    .logo {
-        height: 35px;
+    /* cor do nav bar aqui */
+    .menu {
+        margin-top: 10px;
         display: flex;
+        margin: auto;
         justify-content: center;
         align-items: center;
-        margin: auto;
+        background-color: #2e2e2e87;
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
 
-        user-select: none;
+        .logo {
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+            user-select: none;
 
             img {
                 display: flex;
@@ -107,24 +113,24 @@ body {
                 width: 3em;
                 margin-left: 2em;
             }
-    }
-
-    .links {
-        width: 360px;
-        display: flex;
-        gap: 1em;
-        justify-content: space-around;
-        margin-left: 15%;
-        margin-right: 10px;
-
-        li {
-            display: flex;
-            
-            align-items: center;
-            list-style-type: none;  
         }
 
-            .pizzaSalgada{
+        .links {
+            width: 360px;
+            display: flex;
+            gap: 1em;
+            justify-content: space-around;
+            margin-left: 15%;
+            margin-right: 10px;
+
+            li {
+                display: flex;
+
+                align-items: center;
+                list-style-type: none;
+            }
+
+            .pizzaSalgada {
                 a {
                     color: var(--verdeItalia);
                     text-decoration: none;
@@ -132,501 +138,552 @@ body {
                     font-weight: 700;
                     font-size: 10px;
                     transition: 1s all;
-                }:hover {
-                border-bottom: 1px solid var(--verdeItalia);
+                }
+
+                :hover {
+                    border-bottom: 1px solid var(--verdeItalia);
+                }
             }
-            }
-            .pizzaDoce {  
+
+            .pizzaDoce {
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
+
                 a {
                     color: var(--brancoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
                     font-size: 10px;
-                }:hover {
-                border-bottom: 1px solid var(--brancoItalia);
+                }
+
+                :hover {
+                    border-bottom: 1px solid var(--brancoItalia);
+                }
             }
-            }
+
             .Bebidas {
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
+
                 a {
                     color: var(--vermelhoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
                     font-size: 10px;
-                }:hover {
-                border-bottom: 1px solid var(--vermelhoItalia);
-            }
-            }
-    }
-}
+                }
 
-.containerPizzaSalgada {
-    margin: 25px;
-
-    .topo {
-        width: 380px;
-        margin: auto;
-    }
-
-/* Container geral */
-.containerPizzaSalgada, .containerPizzaDoce {
-    font-family: sans-serif;
-    width: 300px;
-    margin: 20px;
-}
-
-/* Título Preto */
-.tituloPizzaSalgada {
-    background-color: #212020;
-    color: var(--brancoItalia);
-    font-weight: 500;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 8px 8px 0 0;
-}
-
-/* Conteúdo (Começa escondido) */
-.conteudo-pizzas {
-    display: block; /* ABERTO POR PADRÃO */
-    background-color:#272727eb;
-    color: white;
-    padding: 15px;
-    border-left: 2px solid #1a1a1a;
-    border-right: 2px solid #1a1a1a;
-}
-
-/* Conteúdo quando está ATIVO (Aberto) */
-.conteudo-pizzas.aberto {
-    display: none; /* SOME */
-}
-
-.conteudo-pizzas p {
-    margin: 5px 0;
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
-}
-
-/* Botão Vermelho */
-.botao-vermelho {
-    width: 100%;
-    background-color: var(--vermelhoItalia);
-    color: black;
-    font-weight: bold;
-    border: none;
-    font-size: 12px;
-    padding: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 0 0 8px 8px;
-    transition: background 0.3s;
-}
-
-.botao-vermelho:hover {
-    background-color: var(--vermelhoItalia);
-    font-size: 10px;
-}
-
-    .tituloPizzaSalgada {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Special Gothic Expanded One", sans-serif;
-        color: var(--brancoItalia);
-        background-color: var(--corFundo);
-        height: 30px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        width: 380px;
-        background-color: var(--vermelhoItalia);
-        border: none;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-
-        p {
-        font-family: "Zalando Sans Expanded", sans-serif;
-        font-size: 10px;
-        font-weight: 500;
-        }
-    }
-
-    .containerPizzas {
-
-        .topocontainer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 5px 0;
-            
-            .tituPizza {
-                user-select: none;
-                max-width: 200px;
-                p {
-                    font-family: "Zalando Sans Expanded", sans-serif;
-                    font-size: 15px;
-                    font-weight: 500;
+                :hover {
+                    border-bottom: 1px solid var(--vermelhoItalia);
                 }
             }
-
-            .precoPizza {
-                user-select: none;
-                display: flex;
-                align-items: center;
-                margin: auto 0;
-                font-family: "Special Gothic Expanded One", sans-serif;
-                font-size: 10px;
-                color: rgb(255, 113, 4);
-            }
-        }
-
-        .bottompizza {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            .descPizza {
-                user-select: none;
-                width: 250px;
-                p {
-                    font-family: "Comfortaa", sans-serif;
-                    font-size: 12px;
-                }
-            }
-
-            .imgdaPizza {
-                user-select: none;
-                img {
-                    border-radius: 5px;
-                    width: 80px;
-                    height: 80px;
-                }
-/* Estilo para a imagem pequena parecer "clicável" */
-.imagem-pequena {
-  cursor: pointer;
-  transition: 0.3s;
-}
-.imagem-pequena:hover {opacity: 0.7;}
-
-/* O Modal (fundo escuro) */
-.modal {
-  display: none; /* Escondido por padrão */
-  position: fixed; 
-  z-index: 1000; /* Garante que fique acima de tudo */
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.9); /* Preto com transparência */
-}
-
-/* A Imagem Expandida */
-.modal-conteudo {
-  margin: auto;
-  display: block;
-  width: 300px;
-  max-width: 700px;
-  height: 300px;
-  max-height: 700px;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-
-
-}
-
-/* Botão de fechar (X) */
-.fechar {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Animação de Zoom (opcional, mas fica bonito) */
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-            }
-        }
-    }
-    }
-/* FOOTER */
-
-.footer {
-    width: 100%;
-
-    hr {
-        border: 0;
-        height: 1px;
-        background: #1f1f1f82;
-    }
-
-    .textDallas {
-        font-family: "Special Gothic Expanded One", sans-serif;
-        font-weight: 400;
-        margin: auto;
-        justify-content: center;
-        margin-bottom: 15px;
-        display: flex;
-        color: var(--corFundo);
-    }
-
-    margin-top: 10px;
-    background-color: var(--verdeItalia);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-
-    .imagemLogo {
-        width: 400px;
-        display: flex;
-        justify-content: center;
-        margin:auto;
-        img {
-            border-radius: 100%;
-            margin: 20px auto;
-            width: 3.5em;
-            height: 3.5em;  
         }
     }
 
-    .social-links {
-        width: 300px;
-        display: flex;
-        align-items: center;
-        margin: auto;
-        justify-content: center;
-        gap: 20px;
+    .containerPizzaSalgada {
+        margin: 25px;
 
-        .whatsapp {
-            margin: 15px 0;
-            display: flex;
-            align-items: center;
-            a {
-                color: aliceblue;
-                text-decoration: none;
-            }
-            i {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                list-style: none;
-            }
-            border-radius: 10px;
-
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(45deg, #5dff00 1%,#30a345 97%);
-        }
-        
-        .instagram {
-            display: flex;
-            align-items: center;
-            a {
-                color: aliceblue;
-                text-decoration: none;
-            }
-            i {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                list-style: none;
-            }
-
-            border-radius: 10px;
-
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(45deg, #e5d600 1%,#ff4ca8 37%,#ff0084 73%,#e500b7 100%);
-        }
-
-    }
-
-    .endereco {
-        max-width: 300px;
-        display: block;
-        align-items: center;
-        margin: auto;
-        margin-bottom: 30px;
-        color: var(--brancoItalia);
-
-        .direita {
-            display: flex;
-            justify-content: space-between;
-            align-self: center;
+        .topo {
+            width: 380px;
             margin: auto;
-            width: 350px;
-
-        .descricaoFooter {
-            margin-top: 20px;
-            .tituEndereco {
-                margin: 10px 0;
-                font-family: "Special Gothic Expanded One", sans-serif;
-            }
-            .descEndereco {
-                font-family: "Zalando Sans Expanded", sans-serif;
-                font-size: 13px;
-            }
-
         }
 
-    }
-        .btnCompartilhar {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-
-            button {
-                font-family: "Comfortaa", sans-serif;
-                font-size: 10px;
-                width: 120px;
-                height: 30px;
-                user-select: none;
-                border-radius: 15px;
-                border: 1px solid var(--corFundo);
-                transition: 1s ease;
-            }:hover{
-                font-weight: 600;
-                border: 1px solid var(--vermelhoItalia);
-            }
+        /* Container geral */
+        .containerPizzaSalgada,
+        .containerPizzaDoce {
+            font-family: sans-serif;
+            width: 300px;
+            margin: 20px;
         }
-    }
 
-    .containerFim {
-        margin: auto;
-        width: 300px;
-        .copy {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            align-items: center;
-            font-family: "Comfortaa", sans-serif;
-            font-size: 13px;
+        /* Título Preto */
+        .tituloPizzaSalgada {
+            background-color: #212020;
             color: var(--brancoItalia);
-            padding: 20px 0;
+            font-weight: 500;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            border-radius: 8px 8px 0 0;
         }
-        .devs {
-            margin: 20px 0;
-            color: rgb(223, 223, 222);
+
+        /* Conteúdo (Começa escondido) */
+        .conteudo-pizzas {
+            display: block;
+            /* ABERTO POR PADRÃO */
+            background-color: #272727eb;
+            color: white;
+            padding: 15px;
+            border-left: 2px solid #1a1a1a;
+            border-right: 2px solid #1a1a1a;
+        }
+
+        /* Conteúdo quando está ATIVO (Aberto) */
+        .conteudo-pizzas.aberto {
+            display: none;
+            /* SOME */
+        }
+
+        .conteudo-pizzas p {
+            margin: 5px 0;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+
+        /* Botão Vermelho */
+        .botao-vermelho {
+            width: 100%;
+            background-color: var(--vermelhoItalia);
+            color: black;
+            font-weight: bold;
+            border: none;
+            font-size: 12px;
+            padding: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 0 0 8px 8px;
+            transition: background 0.3s;
+        }
+
+        .botao-vermelho:hover {
+            background-color: var(--vermelhoItalia);
+            font-size: 10px;
+        }
+
+        .tituloPizzaSalgada {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-family: "Special Gothic Expanded One", sans-serif;
-            span {
-                color: rgb(193, 193, 193);
-                font-size: 13px;
-                i {
-                    padding-left: 10px;
-                }
+            color: var(--brancoItalia);
+            background-color: var(--corFundo);
+            height: 30px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 380px;
+            background-color: var(--vermelhoItalia);
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            p {
+                font-family: "Zalando Sans Expanded", sans-serif;
+                font-size: 10px;
+                font-weight: 500;
             }
         }
 
-        .developers {
+        .containerPizzas {
+
+            .topocontainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 5px 0;
+
+                .tituPizza {
+                    user-select: none;
+                    max-width: 200px;
+
+                    p {
+                        font-family: "Zalando Sans Expanded", sans-serif;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+                }
+
+                .precoPizza {
+                    user-select: none;
+                    display: flex;
+                    align-items: center;
+                    margin: auto 0;
+                    font-family: "Special Gothic Expanded One", sans-serif;
+                    font-size: 10px;
+                    color: rgb(255, 113, 4);
+                }
+            }
+
+            .bottompizza {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .descPizza {
+                    user-select: none;
+                    width: 250px;
+
+                    p {
+                        font-family: "Comfortaa", sans-serif;
+                        font-size: 12px;
+                    }
+                }
+
+                .imgdaPizza {
+                    user-select: none;
+
+                    img {
+                        border-radius: 5px;
+                        width: 80px;
+                        height: 80px;
+                    }
+
+                    /* Estilo para a imagem pequena parecer "clicável" */
+                    .imagem-pequena {
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+
+                    .imagem-pequena:hover {
+                        opacity: 0.7;
+                    }
+
+                    /* O Modal (fundo escuro) */
+                    .modal {
+                        display: none;
+                        /* Escondido por padrão */
+                        position: fixed;
+                        z-index: 1000;
+                        /* Garante que fique acima de tudo */
+                        padding-top: 100px;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        background-color: rgba(0, 0, 0, 0.9);
+                        /* Preto com transparência */
+                    }
+
+                    /* A Imagem Expandida */
+                    .modal-conteudo {
+                        margin: auto;
+                        display: block;
+                        width: 300px;
+                        max-width: 700px;
+                        height: 300px;
+                        max-height: 700px;
+                        animation-name: zoom;
+                        animation-duration: 0.6s;
+
+
+                    }
+
+                    /* Botão de fechar (X) */
+                    .fechar {
+                        position: absolute;
+                        top: 15px;
+                        right: 35px;
+                        color: #f1f1f1;
+                        font-size: 40px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    /* Animação de Zoom (opcional, mas fica bonito) */
+                    @keyframes zoom {
+                        from {
+                            transform: scale(0)
+                        }
+
+                        to {
+                            transform: scale(1)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* FOOTER */
+
+    .footer {
+        width: 100%;
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #1f1f1f82;
+        }
+
+        .textDallas {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 400;
+            margin: auto;
+            justify-content: center;
+            margin-bottom: 15px;
             display: flex;
-            justify-content: space-between;
+            color: var(--corFundo);
+        }
 
-            .dark, .romano {
-                i {
-                    margin-right: 10px;
-                }
+        margin-top: 10px;
+        background-color: var(--verdeItalia);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        .imagemLogo {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+
+            img {
+                border-radius: 100%;
+                margin: 20px auto;
+                width: 3.5em;
+                height: 3.5em;
+            }
+        }
+
+        .social-links {
+            width: 300px;
+            display: flex;
+            align-items: center;
+            margin: auto;
+            justify-content: center;
+            gap: 20px;
+
+            .whatsapp {
+                margin: 15px 0;
+                display: flex;
+                align-items: center;
+
                 a {
+                    color: aliceblue;
                     text-decoration: none;
-                    font-family: "Zalando Sans Expanded", sans-serif;
-                    font-weight: 500;
-                    color: rgb(220, 205, 205);
                 }
 
-                li {
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
                     list-style: none;
                 }
+
+                border-radius: 10px;
+
+                width: 30px;
+                height: 30px;
+                background: linear-gradient(45deg, #5dff00 1%, #30a345 97%);
+            }
+
+            .instagram {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: aliceblue;
+                    text-decoration: none;
+                }
+
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    list-style: none;
+                }
+
+                border-radius: 10px;
+
+                width: 30px;
+                height: 30px;
+                background: linear-gradient(45deg, #e5d600 1%, #ff4ca8 37%, #ff0084 73%, #e500b7 100%);
+            }
+
+        }
+
+        .endereco {
+            max-width: 300px;
+            display: block;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 30px;
+            color: var(--brancoItalia);
+
+            .direita {
+                display: flex;
+                justify-content: space-between;
+                align-self: center;
+                margin: auto;
+                width: 350px;
+
+                .descricaoFooter {
+                    margin-top: 20px;
+
+                    .tituEndereco {
+                        margin: 10px 0;
+                        font-family: "Special Gothic Expanded One", sans-serif;
+                    }
+
+                    .descEndereco {
+                        font-family: "Zalando Sans Expanded", sans-serif;
+                        font-size: 13px;
+                    }
+
+                }
+
+            }
+
+            .btnCompartilhar {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+
+                button {
+                    font-family: "Comfortaa", sans-serif;
+                    font-size: 10px;
+                    width: 120px;
+                    height: 30px;
+                    user-select: none;
+                    border-radius: 15px;
+                    border: 1px solid var(--corFundo);
+                    transition: 1s ease;
+                }
+
+                :hover {
+                    font-weight: 600;
+                    border: 1px solid var(--vermelhoItalia);
+                }
+            }
+        }
+
+        .containerFim {
+            margin: auto;
+            width: 300px;
+
+            .copy {
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                align-items: center;
+                font-family: "Comfortaa", sans-serif;
+                font-size: 13px;
+                color: var(--brancoItalia);
+                padding: 20px 0;
+            }
+
+            .devs {
+                margin: 20px 0;
+                color: rgb(223, 223, 222);
+                font-family: "Special Gothic Expanded One", sans-serif;
+
+                span {
+                    color: rgb(193, 193, 193);
+                    font-size: 13px;
+
+                    i {
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            .developers {
+                display: flex;
+                justify-content: space-between;
+
+                .dark,
+                .romano {
+                    i {
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        font-family: "Zalando Sans Expanded", sans-serif;
+                        font-weight: 500;
+                        color: rgb(220, 205, 205);
+                    }
+
+                    li {
+                        list-style: none;
+                    }
+                }
             }
         }
     }
-}
 }
 
 /* TELA CEULAR PEQUENA */
 
 @media screen and (max-width: 390px) {
-.no-pc {
-    display: none;
-}
-body {
-    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
-}
-.header, .menu {
-    position: sticky;
-    display: flex;
-    top: 10px;
-    width: 90%;
-    max-width: 340px;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-}
+    .no-pc {
+        display: none;
+    }
 
+    body {
+        overflow-x: hidden;
+        /* Evita rolagem horizontal indesejada */
+    }
 
-/* cor do nav bar aqui */
-.menu {
-    margin-top: 10px;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    background-color: #2e2e2e87;
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-
-    .logo {
-        height: 35px;
+    .header,
+    .menu {
+        position: sticky;
         display: flex;
+        top: 10px;
+        width: 90%;
+        max-width: 340px;
+        margin: auto;
         justify-content: center;
         align-items: center;
-        margin: auto;
+    }
 
-        user-select: none;
+
+    /* cor do nav bar aqui */
+    .menu {
+        margin-top: 10px;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        background-color: #2e2e2e87;
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+
+        .logo {
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+            user-select: none;
 
             img {
                 display: flex;
                 align-items: center;
                 border-radius: 100%;
-                margin-left: 0.5em; /* Reduz a margem da logo */
+                margin-left: 0.5em;
+                /* Reduz a margem da logo */
                 height: 2.5em;
                 width: 2.5em;
             }
-    }
-
-    .links {
-        width: 100%;
-        display: flex;
-        gap: 0.5em;
-        justify-content: space-evenly;
-        margin-left: 0;
-        margin-right: 10px;
-
-        li {
-            display: flex;
-            
-            align-items: center;
-            list-style-type: none;  
         }
 
-            .pizzaSalgada{
+        .links {
+            width: 100%;
+            display: flex;
+            gap: 0.5em;
+            justify-content: space-evenly;
+            margin-left: 0;
+            margin-right: 10px;
+
+            li {
+                display: flex;
+
+                align-items: center;
+                list-style-type: none;
+            }
+
+            .pizzaSalgada {
                 a {
                     color: var(--verdeItalia);
                     text-decoration: none;
@@ -634,433 +691,478 @@ body {
                     font-weight: 700;
                     font-size: 10px;
                     transition: 1s all;
-                }:hover {
-                border-bottom: 1px solid var(--verdeItalia);
+                }
+
+                :hover {
+                    border-bottom: 1px solid var(--verdeItalia);
+                }
             }
-            }
-            .pizzaDoce {  
+
+            .pizzaDoce {
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
+
                 a {
                     color: var(--brancoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
                     font-size: 10px;
-                }:hover {
-                border-bottom: 1px solid var(--brancoItalia);
+                }
+
+                :hover {
+                    border-bottom: 1px solid var(--brancoItalia);
+                }
             }
-            }
+
             .Bebidas {
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
+
                 a {
                     color: var(--vermelhoItalia);
                     text-decoration: none;
                     font-family: "Roboto", sans-serif;
                     font-weight: 700;
                     font-size: 10px;
-                }:hover {
-                border-bottom: 1px solid var(--vermelhoItalia);
+                }
+
+                :hover {
+                    border-bottom: 1px solid var(--vermelhoItalia);
+                }
             }
-            }
-    }
-}
-
-.containerPizzaSalgada {
-    margin: 15px auto;
-    width: 90%;
-
-    .topo {
-        width: 100%;
-    }
-
-/* Container geral */
-.containerPizzaSalgada, .containerPizzaDoce {
-    font-family: sans-serif;
-    margin: 15px auto;
-    width: 90%;
-}
-
-/* Título Preto */
-.tituloPizzaSalgada {
-    background-color: #212020;
-    color: var(--brancoItalia);
-    font-weight: 500;
-    text-align: center;
-    padding: 10px;
-    text-transform: uppercase;
-    border-radius: 8px 8px 0 0;
-}
-
-/* Conteúdo (Começa escondido) */
-.conteudo-pizzas {
-    display: block; /* ABERTO POR PADRÃO */
-    background-color:#272727eb;
-    color: white;
-    padding: 15px;
-    border-left: 2px solid #1a1a1a;
-    border-right: 2px solid #1a1a1a;
-}
-
-/* Conteúdo quando está ATIVO (Aberto) */
-.conteudo-pizzas.aberto {
-    display: none; /* SOME */
-}
-
-.conteudo-pizzas p {
-    margin: 5px 0;
-    border-bottom: 1px solid #555;
-    padding-bottom: 5px;
-}
-
-/* Botão Vermelho */
-.botao-vermelho {
-    width: 100%;
-    background-color: var(--vermelhoItalia);
-    color: black;
-    font-weight: bold;
-    border: none;
-    font-size: 12px;
-    padding: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 0 0 8px 8px;
-    transition: background 0.3s;
-}
-
-.botao-vermelho:hover {
-    background-color: var(--vermelhoItalia);
-    font-size: 10px;
-}
-
-    .tituloPizzaSalgada {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Special Gothic Expanded One", sans-serif;
-        color: var(--brancoItalia);
-        background-color: var(--corFundo);
-        height: 30px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        width: 100%;
-        background-color: var(--vermelhoItalia);
-        border: none;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-
-        p {
-        font-family: "Zalando Sans Expanded", sans-serif;
-        font-size: 10px;
-        font-weight: 500;
         }
     }
 
-    .containerPizzas {
+    .containerPizzaSalgada {
+        margin: 15px auto;
+        width: 90%;
 
-        .topocontainer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .topo {
+            width: 100%;
+        }
+
+        /* Container geral */
+        .containerPizzaSalgada,
+        .containerPizzaDoce {
+            font-family: sans-serif;
+            margin: 15px auto;
+            width: 90%;
+        }
+
+        /* Título Preto */
+        .tituloPizzaSalgada {
+            background-color: #212020;
+            color: var(--brancoItalia);
+            font-weight: 500;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Conteúdo (Começa escondido) */
+        .conteudo-pizzas {
+            display: block;
+            /* ABERTO POR PADRÃO */
+            background-color: #272727eb;
+            color: white;
+            padding: 15px;
+            border-left: 2px solid #1a1a1a;
+            border-right: 2px solid #1a1a1a;
+        }
+
+        /* Conteúdo quando está ATIVO (Aberto) */
+        .conteudo-pizzas.aberto {
+            display: none;
+            /* SOME */
+        }
+
+        .conteudo-pizzas p {
             margin: 5px 0;
-            
-            .tituPizza {
-                user-select: none;
-                max-width: 200px;
-                p {
-                    font-family: "Zalando Sans Expanded", sans-serif;
-                    font-size: 13px;
-                    font-weight: 500;
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+
+        /* Botão Vermelho */
+        .botao-vermelho {
+            width: 100%;
+            background-color: var(--vermelhoItalia);
+            color: black;
+            font-weight: bold;
+            border: none;
+            font-size: 12px;
+            padding: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 0 0 8px 8px;
+            transition: background 0.3s;
+        }
+
+        .botao-vermelho:hover {
+            background-color: var(--vermelhoItalia);
+            font-size: 10px;
+        }
+
+        .tituloPizzaSalgada {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Special Gothic Expanded One", sans-serif;
+            color: var(--brancoItalia);
+            background-color: var(--corFundo);
+            height: 30px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            width: 100%;
+            background-color: var(--vermelhoItalia);
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            p {
+                font-family: "Zalando Sans Expanded", sans-serif;
+                font-size: 10px;
+                font-weight: 500;
+            }
+        }
+
+        .containerPizzas {
+
+            .topocontainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 5px 0;
+
+                .tituPizza {
+                    user-select: none;
+                    max-width: 200px;
+
+                    p {
+                        font-family: "Zalando Sans Expanded", sans-serif;
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                }
+
+                .precoPizza {
+                    user-select: none;
+                    display: flex;
+                    align-items: center;
+                    margin: auto 0;
+                    font-family: "Special Gothic Expanded One", sans-serif;
+                    font-size: 10px;
+                    color: rgb(255, 113, 4);
                 }
             }
 
-            .precoPizza {
-                user-select: none;
+            .bottompizza {
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
-                margin: auto 0;
-                font-family: "Special Gothic Expanded One", sans-serif;
-                font-size: 10px;
-                color: rgb(255, 113, 4);
+
+                .descPizza {
+                    user-select: none;
+                    width: 220px;
+
+                    p {
+                        font-family: "Comfortaa", sans-serif;
+                        font-size: 10px;
+                    }
+                }
+
+                .imgdaPizza {
+                    user-select: none;
+
+                    img {
+                        border-radius: 5px;
+                        width: 65px;
+                        height: 65px;
+                    }
+
+                    /* Estilo para a imagem pequena parecer "clicável" */
+                    .imagem-pequena {
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+
+                    .imagem-pequena:hover {
+                        opacity: 0.7;
+                    }
+
+                    /* O Modal (fundo escuro) */
+                    .modal {
+                        display: none;
+                        /* Escondido por padrão */
+                        position: fixed;
+                        z-index: 1000;
+                        /* Garante que fique acima de tudo */
+                        padding-top: 100px;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        overflow: auto;
+                        background-color: rgba(0, 0, 0, 0.9);
+                        /* Preto com transparência */
+                    }
+
+                    /* A Imagem Expandida */
+                    .modal-conteudo {
+                        margin: auto;
+                        display: block;
+                        width: 90%;
+                        max-width: 700px;
+                        height: auto;
+                        max-height: 700px;
+                        animation-name: zoom;
+                        animation-duration: 0.6s;
+
+
+                    }
+
+                    /* Botão de fechar (X) */
+                    .fechar {
+                        position: absolute;
+                        top: 15px;
+                        right: 35px;
+                        color: #f1f1f1;
+                        font-size: 40px;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+
+                    /* Animação de Zoom (opcional, mas fica bonito) */
+                    @keyframes zoom {
+                        from {
+                            transform: scale(0)
+                        }
+
+                        to {
+                            transform: scale(1)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* FOOTER */
+
+    .footer {
+        width: 100%;
+        bottom: 0;
+
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #1f1f1f82;
+        }
+
+        .textDallas {
+            font-family: "Special Gothic Expanded One", sans-serif;
+            font-weight: 400;
+            margin: auto;
+            justify-content: center;
+            margin-bottom: 15px;
+            display: flex;
+            color: var(--corFundo);
+        }
+
+        margin-top: 10px;
+        background-color: var(--verdeItalia);
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+
+        .imagemLogo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+
+            img {
+                border-radius: 100%;
+                margin: 20px auto;
+                width: 3em;
+                height: 3em;
             }
         }
 
-        .bottompizza {
+        .social-links {
+            width: 90%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            margin: auto;
+            justify-content: center;
+            gap: 20px;
 
-            .descPizza {
-                user-select: none;
-                width: 220px;
-                p {
+            .whatsapp {
+                margin: 15px 0;
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: aliceblue;
+                    text-decoration: none;
+                }
+
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    list-style: none;
+                }
+
+                border-radius: 10px;
+
+                width: 30px;
+                height: 30px;
+                background: linear-gradient(45deg, #5dff00 1%, #30a345 97%);
+            }
+
+            .instagram {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: aliceblue;
+                    text-decoration: none;
+                }
+
+                i {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    list-style: none;
+                }
+
+                border-radius: 10px;
+
+                width: 30px;
+                height: 30px;
+                background: linear-gradient(45deg, #e5d600 1%, #ff4ca8 37%, #ff0084 73%, #e500b7 100%);
+            }
+
+        }
+
+        .endereco {
+            max-width: 300px;
+            display: block;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 30px;
+            color: var(--brancoItalia);
+
+            .direita {
+                display: flex;
+                justify-content: space-between;
+                align-self: center;
+                margin: auto;
+                width: 90%;
+
+                .descricaoFooter {
+                    margin-top: 20px;
+
+                    .tituEndereco {
+                        margin: 10px 0;
+                        font-family: "Special Gothic Expanded One", sans-serif;
+                    }
+
+                    .descEndereco {
+                        font-family: "Zalando Sans Expanded", sans-serif;
+                        font-size: 13px;
+                    }
+
+                }
+
+            }
+
+            .btnCompartilhar {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+
+                button {
                     font-family: "Comfortaa", sans-serif;
                     font-size: 10px;
+                    width: 120px;
+                    height: 30px;
+                    user-select: none;
+                    border-radius: 15px;
+                    border: 1px solid var(--corFundo);
+                    transition: 1s ease;
+                }
+
+                :hover {
+                    font-weight: 600;
+                    border: 1px solid var(--vermelhoItalia);
                 }
             }
-
-            .imgdaPizza {
-                user-select: none;
-                img {
-                    border-radius: 5px;
-                    width: 65px;
-                    height: 65px;
-                }
-/* Estilo para a imagem pequena parecer "clicável" */
-.imagem-pequena {
-  cursor: pointer;
-  transition: 0.3s;
-}
-.imagem-pequena:hover {opacity: 0.7;}
-
-/* O Modal (fundo escuro) */
-.modal {
-  display: none; /* Escondido por padrão */
-  position: fixed; 
-  z-index: 1000; /* Garante que fique acima de tudo */
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(0,0,0,0.9); /* Preto com transparência */
-}
-
-/* A Imagem Expandida */
-.modal-conteudo {
-  margin: auto;
-  display: block;
-  width: 90%;
-  max-width: 700px;
-  height: auto;
-  max-height: 700px;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-
-
-}
-
-/* Botão de fechar (X) */
-.fechar {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Animação de Zoom (opcional, mas fica bonito) */
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-            }
-        }
-    }
-    }
-/* FOOTER */
-
-.footer {
-    width: 100%;
-    bottom: 0;
-
-    
-    hr {
-        border: 0;
-        height: 1px;
-        background: #1f1f1f82;
-    }
-
-    .textDallas {
-        font-family: "Special Gothic Expanded One", sans-serif;
-        font-weight: 400;
-        margin: auto;
-        justify-content: center;
-        margin-bottom: 15px;
-        display: flex;
-        color: var(--corFundo);
-    }
-
-    margin-top: 10px;
-    background-color: var(--verdeItalia);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-
-    .imagemLogo {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin:auto;
-
-        img {
-            border-radius: 100%;
-            margin: 20px auto;
-            width: 3em;
-            height: 3em;  
-        }
-    }
-
-    .social-links {
-        width: 90%;
-        display: flex;
-        align-items: center;
-        margin: auto;
-        justify-content: center;
-        gap: 20px;
-
-        .whatsapp {
-            margin: 15px 0;
-            display: flex;
-            align-items: center;
-            a {
-                color: aliceblue;
-                text-decoration: none;
-            }
-            i {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                list-style: none;
-            }
-            border-radius: 10px;
-
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(45deg, #5dff00 1%,#30a345 97%);
-        }
-        
-        .instagram {
-            display: flex;
-            align-items: center;
-            a {
-                color: aliceblue;
-                text-decoration: none;
-            }
-            i {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                list-style: none;
-            }
-
-            border-radius: 10px;
-
-            width: 30px;
-            height: 30px;
-            background: linear-gradient(45deg, #e5d600 1%,#ff4ca8 37%,#ff0084 73%,#e500b7 100%);
         }
 
-    }
-
-    .endereco {
-        max-width: 300px;
-        display: block;
-        align-items: center;
-        margin: auto;
-        margin-bottom: 30px;
-        color: var(--brancoItalia);
-
-        .direita {
-            display: flex;
-            justify-content: space-between;
-            align-self: center;
+        .containerFim {
             margin: auto;
             width: 90%;
 
-        .descricaoFooter {
-            margin-top: 20px;
-            .tituEndereco {
-                margin: 10px 0;
-                font-family: "Special Gothic Expanded One", sans-serif;
-            }
-            .descEndereco {
-                font-family: "Zalando Sans Expanded", sans-serif;
-                font-size: 13px;
-            }
-
-        }
-
-    }
-        .btnCompartilhar {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-
-            button {
+            .copy {
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                align-items: center;
                 font-family: "Comfortaa", sans-serif;
-                font-size: 10px;
-                width: 120px;
-                height: 30px;
-                user-select: none;
-                border-radius: 15px;
-                border: 1px solid var(--corFundo);
-                transition: 1s ease;
-            }:hover{
-                font-weight: 600;
-                border: 1px solid var(--vermelhoItalia);
-            }
-        }
-    }
-
-    .containerFim {
-        margin: auto;
-        width: 90%;
-        .copy {
-            display: flex;
-            justify-content: center;
-            margin: auto;
-            align-items: center;
-            font-family: "Comfortaa", sans-serif;
-            font-size: 13px;
-            color: var(--brancoItalia);
-            padding: 20px 0;
-        }
-        .devs {
-            margin: 20px 0;
-            color: rgb(223, 223, 222);
-            font-family: "Special Gothic Expanded One", sans-serif;
-            span {
-                color: rgb(193, 193, 193);
                 font-size: 13px;
-                i {
-                    padding-left: 10px;
+                color: var(--brancoItalia);
+                padding: 20px 0;
+            }
+
+            .devs {
+                margin: 20px 0;
+                color: rgb(223, 223, 222);
+                font-family: "Special Gothic Expanded One", sans-serif;
+
+                span {
+                    color: rgb(193, 193, 193);
+                    font-size: 13px;
+
+                    i {
+                        padding-left: 10px;
+                    }
                 }
             }
-        }
 
-        .developers {
-            display: flex;
-            justify-content: space-between;
+            .developers {
+                display: flex;
+                justify-content: space-between;
 
-            .dark, .romano {
-                i {
-                    margin-right: 10px;
-                }
-                a {
-                    text-decoration: none;
-                    font-family: "Zalando Sans Expanded", sans-serif;
-                    font-weight: 500;
-                    color: rgb(220, 205, 205);
-                }
+                .dark,
+                .romano {
+                    i {
+                        margin-right: 10px;
+                    }
 
-                li {
-                    list-style: none;
+                    a {
+                        text-decoration: none;
+                        font-family: "Zalando Sans Expanded", sans-serif;
+                        font-weight: 500;
+                        color: rgb(220, 205, 205);
+                    }
+
+                    li {
+                        list-style: none;
+                    }
                 }
             }
         }
     }
-} 
 }

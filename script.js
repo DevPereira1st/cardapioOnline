@@ -1,15 +1,15 @@
 
 // PUXA ANO ANUAL PARA O COPYRIGHT  
-        document.getElementById("ano-copyright").textContent = new Date().getFullYear();
+document.getElementById("ano-copyright").textContent = new Date().getFullYear();
 
 // API DE COMPARTILHAMENTO
 const btnShare = document.getElementById('btn-compartilhar');
 
 btnShare.addEventListener('click', async () => {
-    
+
     // 1. Pergunta o nome do usuário antes de compartilhar
     let nomeUsuario = prompt("Qual o seu nome para colocar no convite?");
-    
+
     // Se o usuário cancelar ou não digitar nada, definimos um padrão
     if (!nomeUsuario) {
         nomeUsuario = "Um amigo";
@@ -20,7 +20,7 @@ btnShare.addEventListener('click', async () => {
 
     // 3. Dados a serem compartilhados (Corrigido para não repetir propriedades)
     const shareData = {
-        title: document.title, 
+        title: document.title,
         text: mensagem,
         url: "\nhttps://dallascardapio.vercel.app/" // O link do site fica separado do texto
     };
@@ -57,15 +57,15 @@ function alternarMenu(idDoConteudo, botaoClicado) {
 // AUMENTA CADA IMAGEM INDEPENDENTE
 
 // Espera o documento carregar (opcional, mas recomendado)
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     // 1. Seleciona todos os containers que possuem a classe 'imgdaPizza'
     // Cada um desses containers tem dentro de si uma <img> e um <div class="modal">
     var containers = document.querySelectorAll('.imgdaPizza');
 
     // 2. Passa por cada container encontrado (loop)
-    containers.forEach(function(container) {
-        
+    containers.forEach(function (container) {
+
         // Dentro deste container específico, buscamos os elementos:
         var imgPequena = container.querySelector('img');      // A imagem clicável
         var modal = container.querySelector('.modal');        // O modal escondido
@@ -73,18 +73,18 @@ document.addEventListener('DOMContentLoaded', function() {
         var span = modal.querySelector('.fechar');            // O botão X
 
         // --- Configura o clique na imagem pequena ---
-        imgPequena.onclick = function() {
+        imgPequena.onclick = function () {
             modal.style.display = "block";
             modalImg.src = this.src; // Copia o src da imagem clicada para o modal
         }
 
         // --- Configura o clique no X ---
-        span.onclick = function() {
+        span.onclick = function () {
             modal.style.display = "none";
         }
 
         // --- Configura o clique fora da imagem (fundo escuro) ---
-        modal.onclick = function(event) {
+        modal.onclick = function (event) {
             if (event.target === modal) {
                 modal.style.display = "none";
             }
